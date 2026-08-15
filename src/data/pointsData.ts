@@ -63,7 +63,7 @@ export const ACUPRESSURE_POINTS: AcupressurePoint[] = [
     ],
     "cautions": "Jemný tlak 1–3 minuty. V těhotenství netlačit body LI 4, SP 6 a LV 3.",
     "stimulationMethod": "Stiskněte bříškem palce mírným tlakem 1 až 3 minuty s hlubokým dýcháním.",
-    "image": "/points_images/lu-5-bazina-v-lokti.jpg"
+    "image": "/points_images/lu-5-bazina-v-lokti.png"
   },
   {
     "id": "lu-7",
@@ -86,7 +86,7 @@ export const ACUPRESSURE_POINTS: AcupressurePoint[] = [
     ],
     "cautions": "Jemný tlak 1–3 minuty. V těhotenství netlačit body LI 4, SP 6 a LV 3.",
     "stimulationMethod": "Stiskněte bříškem palce mírným tlakem 1 až 3 minuty s hlubokým dýcháním.",
-    "image": "/points_images/lu-7-chybejici-ryha.jpg"
+    "image": "/points_images/lu-7-chybejici-ryha.png"
   },
   {
     "id": "lu-9",
@@ -147,7 +147,7 @@ export const ACUPRESSURE_POINTS: AcupressurePoint[] = [
     ],
     "cautions": "Jemný tlak 1–3 minuty. V těhotenství netlačit body LI 4, SP 6 a LV 3.",
     "stimulationMethod": "Stiskněte bříškem palce mírným tlakem 1 až 3 minuty s hlubokým dýcháním.",
-    "image": "/points_images/li-4-spojene-udoli.jpg"
+    "image": "/points_images/li-4-spojene-udoli.png"
   },
   {
     "id": "li-10",
@@ -170,7 +170,7 @@ export const ACUPRESSURE_POINTS: AcupressurePoint[] = [
     ],
     "cautions": "Jemný tlak 1–3 minuty. V těhotenství netlačit body LI 4, SP 6 a LV 3.",
     "stimulationMethod": "Stiskněte bříškem palce mírným tlakem 1 až 3 minuty s hlubokým dýcháním.",
-    "image": "/points_images/li-10-tri-mile-na-ruce.jpg"
+    "image": "/points_images/li-10-tri-mile-na-ruce.png"
   },
   {
     "id": "li-11",
@@ -239,7 +239,7 @@ export const ACUPRESSURE_POINTS: AcupressurePoint[] = [
     ],
     "cautions": "Jemný tlak 1–3 minuty. V těhotenství netlačit body LI 4, SP 6 a LV 3.",
     "stimulationMethod": "Stiskněte bříškem palce mírným tlakem 1 až 3 minuty s hlubokým dýcháním.",
-    "image": "/points_images/st-2-ctyri-bile.jpg"
+    "image": "/points_images/st-2-ctyri-bile.png"
   },
   {
     "id": "st-3",
@@ -269,7 +269,7 @@ export const ACUPRESSURE_POINTS: AcupressurePoint[] = [
     ],
     "cautions": "Jemný tlak 1–3 minuty. V těhotenství netlačit body LI 4, SP 6 a LV 3.",
     "stimulationMethod": "Stiskněte bříškem palce mírným tlakem 1 až 3 minuty s hlubokým dýcháním.",
-    "image": "/points_images/st-3-velky-otvurek.jpg"
+    "image": "/points_images/st-3-velky-otvurek.png"
   },
   {
     "id": "st-6",
@@ -318,7 +318,7 @@ export const ACUPRESSURE_POINTS: AcupressurePoint[] = [
     ],
     "cautions": "Jemný tlak 1–3 minuty. V těhotenství netlačit body LI 4, SP 6 a LV 3.",
     "stimulationMethod": "Stiskněte bříškem palce mírným tlakem 1 až 3 minuty s hlubokým dýcháním.",
-    "image": "/points_images/st-7-pod-kloubem.jpg"
+    "image": "/points_images/st-7-pod-kloubem.png"
   },
   {
     "id": "st-25",
@@ -356,7 +356,7 @@ export const ACUPRESSURE_POINTS: AcupressurePoint[] = [
     ],
     "cautions": "Jemný tlak 1–3 minuty. V těhotenství netlačit body LI 4, SP 6 a LV 3.",
     "stimulationMethod": "Stiskněte bříškem palce mírným tlakem 1 až 3 minuty s hlubokým dýcháním.",
-    "image": "/points_images/st-36-tri-mile-na-noze.jpg"
+    "image": "/points_images/st-36-tri-mile-na-noze.png"
   },
   {
     "id": "st-37",
@@ -375,7 +375,7 @@ export const ACUPRESSURE_POINTS: AcupressurePoint[] = [
     ],
     "cautions": "Jemný tlak 1–3 minuty. V těhotenství netlačit body LI 4, SP 6 a LV 3.",
     "stimulationMethod": "Stiskněte bříškem palce mírným tlakem 1 až 3 minuty s hlubokým dýcháním.",
-    "image": "/points_images/st-37-horni-velka-prazdnota.jpg"
+    "image": "/points_images/st-37-horni-velka-prazdnota.png"
   },
   {
     "id": "sp-6",
@@ -398,7 +398,7 @@ export const ACUPRESSURE_POINTS: AcupressurePoint[] = [
     ],
     "cautions": "Jemný tlak 1–3 minuty. V těhotenství netlačit body LI 4, SP 6 a LV 3.",
     "stimulationMethod": "Stiskněte bříškem palce mírným tlakem 1 až 3 minuty s hlubokým dýcháním.",
-    "image": "/points_images/sp-6-spojeni-tri-jin.jpg"
+    "image": "/points_images/sp-6-spojeni-tri-jin.png"
   },
   {
     "id": "sp-8",
@@ -417,7 +417,7 @@ export const ACUPRESSURE_POINTS: AcupressurePoint[] = [
     ],
     "cautions": "Jemný tlak 1–3 minuty. V těhotenství netlačit body LI 4, SP 6 a LV 3.",
     "stimulationMethod": "Stiskněte bříškem palce mírným tlakem 1 až 3 minuty s hlubokým dýcháním.",
-    "image": "/points_images/sp-8-cep-zeme.jpg"
+    "image": "/points_images/sp-8-cep-zeme.png"
   },
   {
     "id": "sp-9",
@@ -446,7 +446,7 @@ export const ACUPRESSURE_POINTS: AcupressurePoint[] = [
     ],
     "cautions": "Jemný tlak 1–3 minuty. V těhotenství netlačit body LI 4, SP 6 a LV 3.",
     "stimulationMethod": "Stiskněte bříškem palce mírným tlakem 1 až 3 minuty s hlubokým dýcháním.",
-    "image": "/points_images/sp-9-pramen-na-jinove-strane-ursku.jpg"
+    "image": "/points_images/sp-9-pramen-na-jinove-strane-ursku.png"
   },
   {
     "id": "ht-7",
@@ -528,7 +528,7 @@ export const ACUPRESSURE_POINTS: AcupressurePoint[] = [
     ],
     "cautions": "Jemný tlak 1–3 minuty. V těhotenství netlačit body LI 4, SP 6 a LV 3.",
     "stimulationMethod": "Stiskněte bříškem palce mírným tlakem 1 až 3 minuty s hlubokým dýcháním.",
-    "image": "/points_images/si-19-sluchovy-palac.jpg"
+    "image": "/points_images/si-19-sluchovy-palac.png"
   },
   {
     "id": "ub-2",
@@ -556,7 +556,7 @@ export const ACUPRESSURE_POINTS: AcupressurePoint[] = [
     ],
     "cautions": "Jemný tlak 1–3 minuty. V těhotenství netlačit body LI 4, SP 6 a LV 3.",
     "stimulationMethod": "Stiskněte bříškem palce mírným tlakem 1 až 3 minuty s hlubokým dýcháním.",
-    "image": "/points_images/ub-2-setkani-bambusu.jpg"
+    "image": "/points_images/ub-2-setkani-bambusu.png"
   },
   {
     "id": "ub-12",
@@ -575,7 +575,7 @@ export const ACUPRESSURE_POINTS: AcupressurePoint[] = [
     ],
     "cautions": "Jemný tlak 1–3 minuty. V těhotenství netlačit body LI 4, SP 6 a LV 3.",
     "stimulationMethod": "Stiskněte bříškem palce mírným tlakem 1 až 3 minuty s hlubokým dýcháním.",
-    "image": "/points_images/ub-12-brana-vetru.jpg"
+    "image": "/points_images/ub-12-brana-vetru.png"
   },
   {
     "id": "ub-13",
@@ -600,7 +600,7 @@ export const ACUPRESSURE_POINTS: AcupressurePoint[] = [
     ],
     "cautions": "Jemný tlak 1–3 minuty. V těhotenství netlačit body LI 4, SP 6 a LV 3.",
     "stimulationMethod": "Stiskněte bříškem palce mírným tlakem 1 až 3 minuty s hlubokým dýcháním.",
-    "image": "/points_images/ub-13-shu-bod-plic.jpg"
+    "image": "/points_images/ub-13-shu-bod-plic.png"
   },
   {
     "id": "ub-15",
@@ -619,7 +619,7 @@ export const ACUPRESSURE_POINTS: AcupressurePoint[] = [
     ],
     "cautions": "Jemný tlak 1–3 minuty. V těhotenství netlačit body LI 4, SP 6 a LV 3.",
     "stimulationMethod": "Stiskněte bříškem palce mírným tlakem 1 až 3 minuty s hlubokým dýcháním.",
-    "image": "/points_images/ub-15-shu-bod-srdce.jpg"
+    "image": "/points_images/ub-15-shu-bod-srdce.png"
   },
   {
     "id": "ub-20",
@@ -663,7 +663,7 @@ export const ACUPRESSURE_POINTS: AcupressurePoint[] = [
     ],
     "cautions": "Jemný tlak 1–3 minuty. V těhotenství netlačit body LI 4, SP 6 a LV 3.",
     "stimulationMethod": "Stiskněte bříškem palce mírným tlakem 1 až 3 minuty s hlubokým dýcháním.",
-    "image": "/points_images/ub-22-shu-bod-tri-zaricu.jpg"
+    "image": "/points_images/ub-22-shu-bod-tri-zaricu.png"
   },
   {
     "id": "ub-25",
@@ -688,7 +688,7 @@ export const ACUPRESSURE_POINTS: AcupressurePoint[] = [
     ],
     "cautions": "Jemný tlak 1–3 minuty. V těhotenství netlačit body LI 4, SP 6 a LV 3.",
     "stimulationMethod": "Stiskněte bříškem palce mírným tlakem 1 až 3 minuty s hlubokým dýcháním.",
-    "image": "/points_images/ub-25-shu-bod-tlusteho-streva.jpg"
+    "image": "/points_images/ub-25-shu-bod-tlusteho-streva.png"
   },
   {
     "id": "ub-32",
@@ -805,7 +805,7 @@ export const ACUPRESSURE_POINTS: AcupressurePoint[] = [
     ],
     "cautions": "Jemný tlak 1–3 minuty. V těhotenství netlačit body LI 4, SP 6 a LV 3.",
     "stimulationMethod": "Stiskněte bříškem palce mírným tlakem 1 až 3 minuty s hlubokým dýcháním.",
-    "image": "/points_images/pc-6-pruchod-dovnitr.jpg"
+    "image": "/points_images/pc-6-pruchod-dovnitr.png"
   },
   {
     "id": "sj-3",
@@ -828,7 +828,7 @@ export const ACUPRESSURE_POINTS: AcupressurePoint[] = [
     ],
     "cautions": "Jemný tlak 1–3 minuty. V těhotenství netlačit body LI 4, SP 6 a LV 3.",
     "stimulationMethod": "Stiskněte bříškem palce mírným tlakem 1 až 3 minuty s hlubokým dýcháním.",
-    "image": "/points_images/sj-3-ostruvek-ve-stredu.jpg"
+    "image": "/points_images/sj-3-ostruvek-ve-stredu.png"
   },
   {
     "id": "sj-5",
@@ -851,7 +851,7 @@ export const ACUPRESSURE_POINTS: AcupressurePoint[] = [
     ],
     "cautions": "Jemný tlak 1–3 minuty. V těhotenství netlačit body LI 4, SP 6 a LV 3.",
     "stimulationMethod": "Stiskněte bříškem palce mírným tlakem 1 až 3 minuty s hlubokým dýcháním.",
-    "image": "/points_images/sj-5-pruchod-ven.jpg"
+    "image": "/points_images/sj-5-pruchod-ven.png"
   },
   {
     "id": "sj-6",
@@ -874,7 +874,7 @@ export const ACUPRESSURE_POINTS: AcupressurePoint[] = [
     ],
     "cautions": "Jemný tlak 1–3 minuty. V těhotenství netlačit body LI 4, SP 6 a LV 3.",
     "stimulationMethod": "Stiskněte bříškem palce mírným tlakem 1 až 3 minuty s hlubokým dýcháním.",
-    "image": "/points_images/sj-6-prikop-na-koncetiny.jpg"
+    "image": "/points_images/sj-6-prikop-na-koncetiny.png"
   },
   {
     "id": "sj-17",
@@ -930,7 +930,7 @@ export const ACUPRESSURE_POINTS: AcupressurePoint[] = [
     ],
     "cautions": "Jemný tlak 1–3 minuty. V těhotenství netlačit body LI 4, SP 6 a LV 3.",
     "stimulationMethod": "Stiskněte bříškem palce mírným tlakem 1 až 3 minuty s hlubokým dýcháním.",
-    "image": "/points_images/gb-2-sluchove-setkani.jpg"
+    "image": "/points_images/gb-2-sluchove-setkani.png"
   },
   {
     "id": "gb-12",
@@ -952,7 +952,7 @@ export const ACUPRESSURE_POINTS: AcupressurePoint[] = [
     ],
     "cautions": "Jemný tlak 1–3 minuty. V těhotenství netlačit body LI 4, SP 6 a LV 3.",
     "stimulationMethod": "Stiskněte bříškem palce mírným tlakem 1 až 3 minuty s hlubokým dýcháním.",
-    "image": "/points_images/gb-12-mastoidni-vybizek.jpg"
+    "image": "/points_images/gb-12-mastoidni-vybizek.png"
   },
   {
     "id": "gb-14",
@@ -974,7 +974,7 @@ export const ACUPRESSURE_POINTS: AcupressurePoint[] = [
     ],
     "cautions": "Jemný tlak 1–3 minuty. V těhotenství netlačit body LI 4, SP 6 a LV 3.",
     "stimulationMethod": "Stiskněte bříškem palce mírným tlakem 1 až 3 minuty s hlubokým dýcháním.",
-    "image": "/points_images/gb-14-jang-bily.jpg"
+    "image": "/points_images/gb-14-jang-bily.png"
   },
   {
     "id": "gb-20",
@@ -997,7 +997,7 @@ export const ACUPRESSURE_POINTS: AcupressurePoint[] = [
     ],
     "cautions": "Jemný tlak 1–3 minuty. V těhotenství netlačit body LI 4, SP 6 a LV 3.",
     "stimulationMethod": "Stiskněte bříškem palce mírným tlakem 1 až 3 minuty s hlubokým dýcháním.",
-    "image": "/points_images/gb-20-jezirko-vetru.jpg"
+    "image": "/points_images/gb-20-jezirko-vetru.png"
   },
   {
     "id": "gb-30",
@@ -1046,7 +1046,7 @@ export const ACUPRESSURE_POINTS: AcupressurePoint[] = [
     ],
     "cautions": "Jemný tlak 1–3 minuty. V těhotenství netlačit body LI 4, SP 6 a LV 3.",
     "stimulationMethod": "Stiskněte bříškem palce mírným tlakem 1 až 3 minuty s hlubokým dýcháním.",
-    "image": "/points_images/lv-3-velke-dmuti.jpg"
+    "image": "/points_images/lv-3-velke-dmuti.png"
   },
   {
     "id": "lv-13",
@@ -1074,7 +1074,7 @@ export const ACUPRESSURE_POINTS: AcupressurePoint[] = [
     ],
     "cautions": "Jemný tlak 1–3 minuty. V těhotenství netlačit body LI 4, SP 6 a LV 3.",
     "stimulationMethod": "Stiskněte bříškem palce mírným tlakem 1 až 3 minuty s hlubokým dýcháním.",
-    "image": "/points_images/lv-13-kafrova-brana.jpg"
+    "image": "/points_images/lv-13-kafrova-brana.png"
   },
   {
     "id": "cv-4",
@@ -1093,7 +1093,7 @@ export const ACUPRESSURE_POINTS: AcupressurePoint[] = [
     ],
     "cautions": "Jemný tlak 1–3 minuty. V těhotenství netlačit body LI 4, SP 6 a LV 3.",
     "stimulationMethod": "Stiskněte bříškem palce mírným tlakem 1 až 3 minuty s hlubokým dýcháním.",
-    "image": "/points_images/cv-4-brana-puvodu.jpg"
+    "image": "/points_images/cv-4-brana-puvodu.png"
   },
   {
     "id": "cv-6",
@@ -1122,7 +1122,7 @@ export const ACUPRESSURE_POINTS: AcupressurePoint[] = [
     ],
     "cautions": "Jemný tlak 1–3 minuty. V těhotenství netlačit body LI 4, SP 6 a LV 3.",
     "stimulationMethod": "Stiskněte bříškem palce mírným tlakem 1 až 3 minuty s hlubokým dýcháním.",
-    "image": "/points_images/cv-6-more-cchi.jpg"
+    "image": "/points_images/cv-6-more-cchi.png"
   },
   {
     "id": "cv-12",
@@ -1141,7 +1141,7 @@ export const ACUPRESSURE_POINTS: AcupressurePoint[] = [
     ],
     "cautions": "Jemný tlak 1–3 minuty. V těhotenství netlačit body LI 4, SP 6 a LV 3.",
     "stimulationMethod": "Stiskněte bříškem palce mírným tlakem 1 až 3 minuty s hlubokým dýcháním.",
-    "image": "/points_images/cv-12-stredni-dutina.jpg"
+    "image": "/points_images/cv-12-stredni-dutina.png"
   },
   {
     "id": "cv-17",
@@ -1184,7 +1184,7 @@ export const ACUPRESSURE_POINTS: AcupressurePoint[] = [
     ],
     "cautions": "Jemný tlak 1–3 minuty. V těhotenství netlačit body LI 4, SP 6 a LV 3.",
     "stimulationMethod": "Stiskněte bříškem palce mírným tlakem 1 až 3 minuty s hlubokým dýcháním.",
-    "image": "/points_images/gv-26-vodni-zlabek.jpg"
+    "image": "/points_images/gv-26-vodni-zlabek.png"
   }
 ];
 

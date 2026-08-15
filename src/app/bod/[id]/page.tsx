@@ -55,17 +55,17 @@ export default async function PointDetailPage({ params }: PageProps) {
       </div>
 
       {/* Grid Layout */}
-      <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16">
+      <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8">
         {/* Left Column (Canvas) */}
         <div className="lg:col-span-8 flex flex-col gap-10">
           {/* Image Card */}
-          <section className="bg-surface-container-lowest rounded-[24px] p-2 md:p-4 soft-shadow relative overflow-hidden">
-            <div className="relative w-full aspect-video md:aspect-[16/10] rounded-[20px] overflow-hidden bg-surface-container">
+          <section className="bg-surface-container-lowest rounded-[24px] soft-shadow relative overflow-hidden">
+            <div className="relative w-full aspect-square overflow-hidden rounded-[24px]">
               <Image
                 src={point.image}
                 alt={`Snímek bodu ${point.code} - ${point.name}`}
                 fill
-                className="object-contain p-2"
+                className="object-contain"
                 sizes="(max-width: 1024px) 100vw, 66vw"
                 priority
               />
@@ -158,27 +158,45 @@ export default async function PointDetailPage({ params }: PageProps) {
         </div>
 
         {/* Right Column (Sidebar) */}
-        <div className="lg:col-span-4 flex flex-col gap-8">
+        <div className="lg:col-span-4 flex flex-col gap-6">
+
+          {/* Related Issues Widget */}
+          <div className="bg-surface-container-lowest rounded-[24px] p-6 soft-shadow">
+            <h3 className="text-headline-md font-headline text-primary mb-4 text-xl">
+              Související potíže
+            </h3>
+            <div className="flex flex-wrap gap-2">
+              {point.symptoms.map((sym) => (
+                <span
+                  key={sym}
+                  className="px-4 py-2 rounded-full border border-outline-variant text-on-surface-variant hover:bg-surface-container hover:text-primary transition-colors text-label-md font-body text-sm cursor-default"
+                >
+                  {sym}
+                </span>
+              ))}
+            </div>
+          </div>
+
           {/* Similar Points Widget */}
           {relatedPoints.length > 0 && (
             <div className="bg-surface-container-lowest rounded-[24px] p-6 soft-shadow">
-              <h3 className="text-headline-md font-headline text-primary mb-6 text-xl">
+              <h3 className="text-headline-md font-headline text-primary mb-4 text-xl">
                 Podobné body
               </h3>
-              <div className="flex flex-col gap-4">
+              <div className="flex flex-col gap-3">
                 {relatedPoints.map((rel) => (
                   <Link
                     key={rel.id}
                     href={`/bod/${rel.id}`}
                     className="group flex gap-4 items-center p-3 rounded-2xl hover:bg-surface-container transition-colors"
                   >
-                    <div className="w-16 h-16 rounded-xl overflow-hidden shrink-0 bg-surface-dim relative">
+                    <div className="w-14 h-14 rounded-xl overflow-hidden shrink-0 bg-surface-dim relative">
                       <Image
                         src={rel.image}
                         alt={rel.name}
                         fill
-                        className="object-cover group-hover:scale-105 transition-transform duration-500"
-                        sizes="64px"
+                        className="object-contain group-hover:scale-105 transition-transform duration-500"
+                        sizes="56px"
                       />
                     </div>
                     <div>
@@ -194,23 +212,6 @@ export default async function PointDetailPage({ params }: PageProps) {
               </div>
             </div>
           )}
-
-          {/* Related Issues Widget */}
-          <div className="bg-surface-container-lowest rounded-[24px] p-6 soft-shadow">
-            <h3 className="text-headline-md font-headline text-primary mb-6 text-xl">
-              Související potíže
-            </h3>
-            <div className="flex flex-wrap gap-2">
-              {point.symptoms.map((sym) => (
-                <span
-                  key={sym}
-                  className="px-4 py-2 rounded-full border border-outline-variant text-on-surface-variant hover:bg-surface-container hover:text-primary transition-colors text-label-md font-body text-sm cursor-default"
-                >
-                  {sym}
-                </span>
-              ))}
-            </div>
-          </div>
 
           {/* Consultation CTA */}
           <div className="bg-primary text-on-primary rounded-[24px] p-8 shadow-lg text-center">
