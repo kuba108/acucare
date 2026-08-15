@@ -1,36 +1,36 @@
 'use client';
 
 import React from 'react';
-import Link from 'next/link';
-import { Quote, ArrowRight, Search, Fingerprint, Heart, Sparkles } from 'lucide-react';
+import { Quote, Fingerprint, Heart, Sparkles } from 'lucide-react';
+import { SearchBar } from './SearchBar';
+import { AcupressurePoint } from '@/data/pointsData';
 
-export function QuoteSection() {
+interface QuoteSectionProps {
+  onSearchChange: (query: string, results: AcupressurePoint[]) => void;
+}
+
+export function QuoteSection({ onSearchChange }: QuoteSectionProps) {
   return (
     <>
       {/* Hero Section */}
-      <section className="relative w-full min-h-[500px] flex items-center justify-center py-section-gap px-container-padding overflow-hidden bg-surface">
-        <div className="relative z-10 max-w-4xl mx-auto text-center flex flex-col items-center">
-          <div className="mb-8">
-            <Quote className="w-16 h-16 text-primary/40 mb-4 mx-auto rotate-180" />
+      <section className="relative z-20 w-full min-h-[480px] flex items-center justify-center py-12 px-container-padding bg-surface border-b border-outline-variant/20">
+        <div className="relative z-10 max-w-3xl mx-auto text-center flex flex-col items-center">
+          {/* Quote Block - Smaller style */}
+          <div className="mb-4">
+            <Quote className="w-10 h-10 text-primary/30 mb-2 mx-auto rotate-180" />
           </div>
-          <h1 className="text-headline-lg-mobile md:text-headline-xl font-headline text-primary mb-10 max-w-3xl leading-snug">
-            &quot;Až příliš často podceňujeme moc dotyku, úsměvu, laskavého slova, naslouchajícího ucha, upřímné poklony nebo sebemenšího projevu péče, i když mají schopnost převrátit život vzhůru nohama.&quot;
-          </h1>
-          <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto justify-center mt-4">
-            <Link
-              href="#katalog"
-              className="bg-primary text-on-primary px-8 py-4 rounded-full text-label-md font-body hover:bg-primary/90 transition-all shadow-sm active:scale-95 flex items-center justify-center gap-2"
-            >
-              <span>Prozkoumat body</span>
-              <ArrowRight className="w-[18px] h-[18px]" />
-            </Link>
-            <Link
-              href="#symptomy"
-              className="bg-surface text-primary border border-secondary px-8 py-4 rounded-full text-label-md font-body hover:bg-surface-container-low transition-all active:scale-95 flex items-center justify-center gap-2"
-            >
-              <Search className="w-[18px] h-[18px]" />
-              <span>Hledat podle potíží</span>
-            </Link>
+          <p className="text-sm sm:text-base md:text-lg italic font-headline text-primary/80 max-w-2xl leading-relaxed mb-8">
+            „Až příliš často podceňujeme moc dotyku, úsměvu, laskavého slova, naslouchajícího ucha, upřímné poklony nebo sebemenšího projevu péče, i když mají schopnost převrátit život vzhůru nohama.“
+          </p>
+          
+          {/* Search Header Label */}
+          <h2 className="text-headline-md font-headline text-primary mb-3">
+            Co Vás trápí?
+          </h2>
+          
+          {/* Search Input directly in Hero */}
+          <div className="w-full max-w-xl">
+            <SearchBar onSearchChange={onSearchChange} />
           </div>
         </div>
       </section>

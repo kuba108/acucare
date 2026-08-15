@@ -17,22 +17,22 @@ export function Header() {
         <nav className="hidden md:flex space-x-8">
           <Link
             href="/"
-            className="text-primary font-bold border-b-2 border-primary pb-1 text-label-md font-body"
+            className="text-on-surface-variant hover:text-primary transition-colors duration-200 text-label-md font-body"
           >
             Domů
           </Link>
-          <a
-            href="#katalog"
+          <Link
+            href="/seznam-bodu"
             className="text-on-surface-variant hover:text-primary transition-colors duration-200 text-label-md font-body"
           >
             Všechny Body
-          </a>
-          <a
-            href="#symptomy"
+          </Link>
+          <Link
+            href="/symptom/bolest-hlavy-migrena"
             className="text-on-surface-variant hover:text-primary transition-colors duration-200 text-label-md font-body"
           >
             Symptomy
-          </a>
+          </Link>
         </nav>
 
         {/* Actions */}
