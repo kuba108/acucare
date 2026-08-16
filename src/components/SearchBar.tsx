@@ -8,14 +8,22 @@ import { SYMPTOM_OPTIONS, SymptomOption } from '@/data/symptomsData';
 
 interface SearchBarProps {
   onSearchChange?: (query: string, results: AcupressurePoint[]) => void;
+  onNavigate?: () => void;
+  autoFocus?: boolean;
 }
 
-export function SearchBar({ onSearchChange }: SearchBarProps) {
+export function SearchBar({ onSearchChange, onNavigate, autoFocus }: SearchBarProps) {
   const [query, setQuery] = useState('');
   const [isOpen, setIsOpen] = useState(false);
   const [searchMode, setSearchMode] = useState<'symptom' | 'point'>('symptom');
   const containerRef = useRef<HTMLDivElement>(null);
   const inputRef = useRef<HTMLInputElement>(null);
+
+  useEffect(() => {
+    if (autoFocus) {
+      inputRef.current?.focus();
+    }
+  }, [autoFocus]);
 
   // Filter matching symptoms (Mode: symptom)
   const matchedSymptoms = useMemo(() => {
@@ -150,24 +158,50 @@ export function SearchBar({ onSearchChange }: SearchBarProps) {
           
           {/* SYMPTOM MODE RESULTS */}
           {searchMode === 'symptom' && (
-            <div className="space-y-2">
-              <span className="text-label-md font-body text-secondary uppercase tracking-wider block border-b border-outline-variant/30 pb-2">
-                Nalezené příznaky ({matchedSymptoms.length})
+            <div className="space-y-3">
+              <span className="text-label-md font-body text-secondary uppercase tracking-wider block border-b border-outline-variant/30 pb-2 font-bold">
+                Doporučené body pro vaše potíže
               </span>
               {matchedSymptoms.length > 0 ? (
-                <div className="flex flex-col gap-1">
+                <div className="flex flex-col gap-3">
                   {matchedSymptoms.map((sym) => (
-                    <Link
-                      key={sym.id}
-                      href={`/symptom/${sym.id}`}
-                      onClick={() => setIsOpen(false)}
-                      className="flex items-center justify-between p-2.5 rounded-lg hover:bg-surface-container text-on-surface transition-colors group text-left w-full"
-                    >
-                      <span className="font-bold text-sm text-primary group-hover:text-primary-container">
+                    <div key={sym.id} className="bg-surface-container-low/50 rounded-xl p-2.5">
+                      <span className="text-xs font-bold text-secondary uppercase tracking-wider block px-2 mb-1.5">
                         {sym.label}
                       </span>
-                      <ChevronRight className="w-5 h-5 text-primary group-hover:translate-x-1 transition-transform" />
-                    </Link>
+                      <div className="flex flex-col gap-1">
+                        {sym.pointIds.map((pId) => {
+                          const pt = ACUPRESSURE_POINTS.find((p) => p.id === pId);
+                          if (!pt) return null;
+                          return (
+                            <Link
+                              key={pt.id}
+                              href={`/bod/${pt.id}`}
+                              onClick={() => {
+                                setIsOpen(false);
+                                onNavigate?.();
+                              }}
+                              className="flex items-center justify-between p-2 rounded-lg bg-surface-container-lowest hover:bg-surface-container text-on-surface transition-colors group text-left w-full border border-outline-variant/20 shadow-xs"
+                            >
+                              <div className="flex items-center gap-3">
+                                <span className="w-8 h-8 rounded-lg bg-surface-container-low flex items-center justify-center font-bold text-xs text-primary flex-shrink-0">
+                                  {pt.code}
+                                </span>
+                                <div>
+                                  <span className="font-bold text-sm text-primary group-hover:text-primary-container block">
+                                    {pt.name}
+                                  </span>
+                                  <span className="text-xs text-on-surface-variant line-clamp-1">
+                                    {pt.summary}
+                                  </span>
+                                </div>
+                              </div>
+                              <ChevronRight className="w-4 h-4 text-primary group-hover:translate-x-1 transition-transform shrink-0" />
+                            </Link>
+                          );
+                        })}
+                      </div>
+                    </div>
                   ))}
                 </div>
               ) : (
@@ -190,7 +224,10 @@ export function SearchBar({ onSearchChange }: SearchBarProps) {
                     <Link
                       key={point.id}
                       href={`/bod/${point.id}`}
-                      onClick={() => setIsOpen(false)}
+                      onClick={() => {
+                        setIsOpen(false);
+                        onNavigate?.();
+                      }}
                       className="flex items-center justify-between p-2.5 rounded-lg hover:bg-surface-container text-on-surface transition-colors group text-left w-full"
                     >
                       <div className="flex items-center gap-3">
