@@ -33,18 +33,8 @@ export default async function PointDetailPage({ params }: PageProps) {
   return (
     <main className="flex-grow w-full max-w-[1200px] mx-auto px-container-padding py-12 md:py-16">
       {/* Header Section */}
-      <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
+      <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-8 md:mb-12">
         <div>
-          <Link
-            href="/"
-            className="inline-flex items-center gap-2 text-on-surface-variant hover:text-primary transition-colors text-label-md font-body mb-4"
-          >
-            <ArrowLeft className="w-4 h-4" />
-            <span>Zpět na katalog</span>
-          </Link>
-          <span className="text-secondary font-body text-label-md uppercase tracking-widest mb-2 block">
-            Akupresurní bod – {point.bodyRegion}
-          </span>
           <h1 className="text-headline-xl font-headline text-primary mb-2">
             Bod {point.name} ({point.code})
           </h1>
