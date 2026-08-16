@@ -2,7 +2,7 @@ import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { notFound } from 'next/navigation';
-import { ArrowLeft, MapPin, Activity, ShieldAlert, Clock, ChevronRight, Brain, Frown, CircleDot, Wind } from 'lucide-react';
+import { ArrowLeft, MapPin, Activity, ShieldAlert, Clock, ChevronRight, Brain, Frown, CircleDot, Wind, Sparkles } from 'lucide-react';
 import { ACUPRESSURE_POINTS } from '@/data/pointsData';
 
 interface PageProps {
@@ -59,7 +59,7 @@ export default async function PointDetailPage({ params }: PageProps) {
         {/* Left Column (Canvas) */}
         <div className="lg:col-span-8 flex flex-col gap-10">
           {/* Image Card */}
-          <section className="bg-surface-container-lowest rounded-[24px] soft-shadow relative overflow-hidden">
+          <section className="bg-surface-container-lowest rounded-[24px] soft-shadow overflow-hidden">
             <div className="relative w-full aspect-square overflow-hidden rounded-[24px]">
               <Image
                 src={point.image}
@@ -70,23 +70,44 @@ export default async function PointDetailPage({ params }: PageProps) {
                 priority
               />
             </div>
-            <div className="p-4 md:px-6 md:pb-6 md:pt-4">
-              <p className="text-body-md font-body text-on-surface-variant flex items-center gap-2">
-                <MapPin className="w-5 h-5 text-secondary flex-shrink-0" />
+          </section>
+
+          {/* Point Info Card: Poloha, O čem bod vypovídá, Poznámky */}
+          <section className="bg-surface-container-lowest rounded-[24px] p-8 md:p-10 soft-shadow flex flex-col gap-8 divide-y divide-outline-variant/30">
+            {/* 1. Poloha */}
+            <div>
+              <h2 className="text-headline-md font-headline text-primary mb-4 flex items-center gap-3">
+                <MapPin className="w-6 h-6 text-secondary flex-shrink-0" />
+                Poloha
+              </h2>
+              <p className="text-body-md font-body text-on-surface-variant leading-relaxed">
                 {point.location}
               </p>
             </div>
-          </section>
 
-          {/* O čem bod vypovídá */}
-          <section className="bg-surface-container-lowest rounded-[24px] p-8 md:p-10 soft-shadow">
-            <h2 className="text-headline-md font-headline text-primary mb-6 flex items-center gap-3">
-              <Activity className="w-6 h-6 text-secondary" />
-              O čem bod vypovídá
-            </h2>
-            <div className="prose max-w-none text-body-md font-body text-on-surface-variant space-y-4">
-              <p>{point.usage}</p>
+            {/* 2. O čem bod vypovídá */}
+            <div className="pt-8">
+              <h2 className="text-headline-md font-headline text-primary mb-4 flex items-center gap-3">
+                <Activity className="w-6 h-6 text-secondary flex-shrink-0" />
+                O čem bod vypovídá
+              </h2>
+              <p className="text-body-md font-body text-on-surface-variant leading-relaxed">
+                {point.usage}
+              </p>
             </div>
+
+            {/* 3. Poznámky */}
+            {point.notes && (
+              <div className="pt-8">
+                <h2 className="text-headline-md font-headline text-primary mb-4 flex items-center gap-3">
+                  <Sparkles className="w-6 h-6 text-secondary flex-shrink-0" />
+                  Poznámky
+                </h2>
+                <p className="text-body-md font-body text-on-surface-variant leading-relaxed">
+                  {point.notes}
+                </p>
+              </div>
+            )}
           </section>
 
           {/* Indikace (Bento Grid Style) */}

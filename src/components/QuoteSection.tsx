@@ -12,24 +12,19 @@ interface QuoteSectionProps {
 export function QuoteSection({ onSearchChange }: QuoteSectionProps) {
   return (
     <>
-      {/* Hero Section */}
-      <section className="relative z-20 w-full min-h-[480px] flex items-center justify-center py-12 px-container-padding bg-surface border-b border-outline-variant/20">
-        <div className="relative z-10 max-w-3xl mx-auto text-center flex flex-col items-center">
-          {/* Quote Block - Smaller style */}
-          <div className="mb-4">
-            <Quote className="w-10 h-10 text-primary/30 mb-2 mx-auto rotate-180" />
-          </div>
-          <p className="text-sm sm:text-base md:text-lg italic font-headline text-primary/80 max-w-2xl leading-relaxed mb-8">
-            „Až příliš často podceňujeme moc dotyku, úsměvu, laskavého slova, naslouchajícího ucha, upřímné poklony nebo sebemenšího projevu péče, i když mají schopnost převrátit život vzhůru nohama.“
-          </p>
-          
-          {/* Search Header Label */}
-          <h2 className="text-headline-md font-headline text-primary mb-3">
-            Co Vás trápí?
-          </h2>
-          
+      {/* Hero Section with Background Image */}
+      <section className="relative z-20 w-full min-h-[460px] md:min-h-[520px] flex items-center justify-center py-16 md:py-24 px-container-padding overflow-hidden border-b border-outline-variant/20">
+        {/* Background Image & Ambient Overlay */}
+        <div
+          className="absolute inset-0 w-full h-full bg-cover bg-center"
+          style={{ backgroundImage: "url('/hero-bg.jpg')" }}
+        >
+          <div className="absolute inset-0 bg-surface/75 backdrop-blur-[1px]"></div>
+        </div>
+
+        <div className="relative z-10 w-full max-w-2xl mx-auto flex flex-col items-center">
           {/* Search Input directly in Hero */}
-          <div className="w-full max-w-xl">
+          <div className="w-full">
             <SearchBar onSearchChange={onSearchChange} />
           </div>
         </div>
