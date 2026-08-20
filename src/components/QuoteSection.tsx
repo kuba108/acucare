@@ -13,16 +13,16 @@ export function QuoteSection({ onSearchChange }: QuoteSectionProps) {
   return (
     <>
       {/* Hero Section with Background Image */}
-      <section className="relative z-20 w-full min-h-[460px] md:min-h-[520px] flex items-center justify-center py-16 md:py-24 px-container-padding overflow-hidden border-b border-outline-variant/20">
+      <section className="relative z-30 w-full min-h-[460px] md:min-h-[520px] flex items-center justify-center py-16 md:py-24 px-container-padding border-b border-outline-variant/20">
         {/* Background Image & Ambient Overlay */}
         <div
-          className="absolute inset-0 w-full h-full bg-cover bg-center"
+          className="absolute inset-0 w-full h-full overflow-hidden bg-cover bg-center"
           style={{ backgroundImage: "url('/hero-bg.jpg')" }}
         >
           <div className="absolute inset-0 bg-surface/75 backdrop-blur-[1px]"></div>
         </div>
 
-        <div className="relative z-10 w-full max-w-2xl mx-auto flex flex-col items-center">
+        <div className="relative z-20 w-full max-w-2xl mx-auto flex flex-col items-center">
           {/* Search Input directly in Hero */}
           <div className="w-full">
             <SearchBar onSearchChange={onSearchChange} />
