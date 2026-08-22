@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32">
+  <!-- Background: Rounded square with AcuCare Primary Teal (#004f45) -->
+  <rect width="32" height="32" rx="8" fill="#004f45" />
+
+  <!-- Outer Energy / Petal curves -->
+  <path d="M16 5 C12 12 7 15 7 20 C7 25 11 27 16 27 C21 27 25 25 25 20 C25 15 20 12 16 5 Z" fill="#00695c" opacity="0.6" />
+  <path d="M16 8 C13 13 9 16 9 20 C9 24 12 25.5 16 25.5 C20 25.5 23 24 23 20 C23 16 19 13 16 8 Z" fill="#84d5c5" opacity="0.8" />
+
+  <!-- Inner Acupressure Point Pulse -->
+  <circle cx="16" cy="18" r="3" fill="#ffffff" />
+  <circle cx="16" cy="18" r="1.5" fill="#004f45" />
+
+  <!-- Top Energy Sparkle -->
+  <path d="M16 4 L16.8 6.2 L19 7 L16.8 7.8 L16 10 L15.2 7.8 L13 7 L15.2 6.2 Z" fill="#a0f2e1" />
+</svg>

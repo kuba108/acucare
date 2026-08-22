@@ -7,6 +7,10 @@ export const metadata: Metadata = {
   title: 'AcuCare - Akupresurní Body',
   description: 'Zadejte své potíže (bolest zad, migréna, nespavost, zažívání, kašel) a objevte konkrétní akupresurní body. Průvodce tradiční akupresurou s návody a vizualizacemi.',
   keywords: ['akupresurní body', 'akupresura', 'bolest zad', 'bolest hlavy', 'tradiční čínská medicína', 'léčivý průvodce', 'masáž bodů'],
+  icons: {
+    icon: '/icon.svg',
+    apple: '/icon.svg',
+  },
 };
 
 export default function RootLayout({
