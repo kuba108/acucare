@@ -19,17 +19,17 @@ export function Footer() {
             Více informací
           </Link>
           <Link
+            href="/cele-telo"
+            className="text-on-surface-variant hover:text-on-surface hover:underline transition-colors text-label-md font-body"
+          >
+            Celé tělo
+          </Link>
+          <Link
             href="/seznam-bodu"
             className="text-on-surface-variant hover:text-on-surface hover:underline transition-colors text-label-md font-body"
           >
             Všechny body
           </Link>
-          <a
-            href="#"
-            className="text-on-surface-variant hover:text-on-surface hover:underline transition-colors text-label-md font-body"
-          >
-            Ochrana soukromí
-          </a>
         </div>
 
         {/* Copyright */}

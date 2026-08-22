@@ -118,7 +118,7 @@ export function SearchBar({ onSearchChange, onNavigate, autoFocus }: SearchBarPr
           }`}
         >
           <Search className={`w-5 h-5 ${searchMode === 'point' ? 'text-primary' : 'text-on-surface-variant'}`} />
-          <span>Název bodu / Kód</span>
+          <span>Název / kód</span>
         </button>
       </div>
 

@@ -47,6 +47,12 @@ export function Header() {
               Všechny Body
             </Link>
             <Link
+              href="/cele-telo"
+              className="text-on-surface-variant hover:text-primary transition-colors duration-200 text-label-md font-body"
+            >
+              Celé tělo
+            </Link>
+            <Link
               href="/o-akupresure"
               className="text-on-surface-variant hover:text-primary transition-colors duration-200 text-label-md font-body"
             >
