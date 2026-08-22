@@ -17,7 +17,7 @@ export function QuoteSection({ onSearchChange }: QuoteSectionProps) {
         {/* Background Image & Ambient Overlay */}
         <div
           className="absolute inset-0 w-full h-full overflow-hidden bg-cover bg-center"
-          style={{ backgroundImage: "url('/hero-bg.jpg')" }}
+          style={{ backgroundImage: "url('/hp.jpg')" }}
         >
           <div className="absolute inset-0 bg-surface/75 backdrop-blur-[1px]"></div>
         </div>
