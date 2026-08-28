@@ -30,6 +30,7 @@ export function Header() {
     { href: '/seznam-bodu', label: 'Všechny Body', isActive: pathname === '/seznam-bodu' || pathname.startsWith('/bod/') },
     { href: '/cele-telo', label: 'Celé tělo', isActive: pathname === '/cele-telo' },
     { href: '/o-akupresure', label: 'Více informací', isActive: pathname === '/o-akupresure' },
+    { href: '/objednavka', label: 'Objednávka', isActive: pathname === '/objednavka' },
   ];
 
   return (

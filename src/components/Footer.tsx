@@ -30,6 +30,12 @@ export function Footer() {
           >
             Všechny body
           </Link>
+          <Link
+            href="/objednavka"
+            className="text-on-surface-variant hover:text-[#50aab2] transition-colors text-label-md font-body"
+          >
+            Objednávka
+          </Link>
         </div>
 
         {/* Copyright */}
