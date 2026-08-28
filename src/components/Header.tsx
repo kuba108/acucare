@@ -2,11 +2,13 @@
 
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 import { Search, X } from 'lucide-react';
 import { SearchBar } from './SearchBar';
 
 export function Header() {
   const [isSearchModalOpen, setIsSearchModalOpen] = useState(false);
+  const pathname = usePathname();
 
   // Keyboard shortcut (Cmd+K / Ctrl+K / Escape)
   useEffect(() => {
@@ -23,52 +25,48 @@ export function Header() {
     return () => window.removeEventListener('keydown', handleKeyDown);
   }, []);
 
+  const navItems = [
+    { href: '/', label: 'Domů', isActive: pathname === '/' },
+    { href: '/seznam-bodu', label: 'Všechny Body', isActive: pathname === '/seznam-bodu' || pathname.startsWith('/bod/') },
+    { href: '/cele-telo', label: 'Celé tělo', isActive: pathname === '/cele-telo' },
+    { href: '/o-akupresure', label: 'Více informací', isActive: pathname === '/o-akupresure' },
+  ];
+
   return (
     <>
-      <header className="w-full bg-surface/80 backdrop-blur-md shadow-sm sticky top-0 z-50">
+      <header className="w-full bg-surface-container-low/90 backdrop-blur-md shadow-sm sticky top-0 z-50 border-b border-outline-variant/20">
         <div className="flex justify-between items-center w-full px-container-padding max-w-[1200px] mx-auto h-16">
-          {/* Brand */}
-          <Link href="/" className="text-headline-md font-headline font-bold text-primary tracking-tight">
+          {/* Brand Logo in #50aab2 */}
+          <Link href="/" className="text-headline-md font-headline font-bold text-[#50aab2] tracking-tight hover:opacity-90 transition-opacity">
             AcuCare
           </Link>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex space-x-8">
-            <Link
-              href="/"
-              className="text-on-surface-variant hover:text-primary transition-colors duration-200 text-label-md font-body"
-            >
-              Domů
-            </Link>
-            <Link
-              href="/seznam-bodu"
-              className="text-on-surface-variant hover:text-primary transition-colors duration-200 text-label-md font-body"
-            >
-              Všechny Body
-            </Link>
-            <Link
-              href="/cele-telo"
-              className="text-on-surface-variant hover:text-primary transition-colors duration-200 text-label-md font-body"
-            >
-              Celé tělo
-            </Link>
-            <Link
-              href="/o-akupresure"
-              className="text-on-surface-variant hover:text-primary transition-colors duration-200 text-label-md font-body"
-            >
-              Více informací
-            </Link>
+          <nav className="hidden md:flex items-stretch space-x-8 h-16">
+            {navItems.map((item) => (
+              <Link
+                key={item.href}
+                href={item.href}
+                className={`flex items-center h-full border-b-2 transition-colors duration-200 text-label-md font-body ${
+                  item.isActive
+                    ? 'text-[#50aab2] font-bold border-[#50aab2]'
+                    : 'text-on-surface-variant border-transparent hover:text-[#50aab2]'
+                }`}
+              >
+                {item.label}
+              </Link>
+            ))}
           </nav>
 
           {/* Actions */}
           <div className="flex items-center space-x-4">
             <button
               onClick={() => setIsSearchModalOpen(true)}
-              className="text-on-surface-variant hover:bg-surface-container-low hover:text-primary rounded-full p-2.5 transition-all active:scale-95 duration-150 flex items-center justify-center cursor-pointer group"
+              className="text-on-surface-variant hover:bg-surface-container hover:text-[#50aab2] rounded-full p-2.5 transition-all active:scale-95 duration-150 flex items-center justify-center cursor-pointer group"
               title="Hledat (⌘K)"
               aria-label="Otevřít vyhledávání"
             >
-              <Search className="w-5 h-5 group-hover:text-primary transition-colors" />
+              <Search className="w-5 h-5 group-hover:text-[#50aab2] transition-colors" />
             </button>
           </div>
         </div>
@@ -90,8 +88,8 @@ export function Header() {
           >
             {/* Header with ESC hint and Close Button */}
             <div className="flex items-center justify-between mb-6 pb-3 border-b border-outline-variant/30">
-              <span className="text-label-md font-body font-bold text-primary flex items-center gap-2">
-                <Search className="w-4 h-4 text-secondary" />
+              <span className="text-label-md font-body font-bold text-[#50aab2] flex items-center gap-2">
+                <Search className="w-4 h-4 text-[#50aab2]" />
                 Rychlé vyhledávání
               </span>
               <div className="flex items-center gap-2">

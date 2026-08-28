@@ -99,7 +99,7 @@ export function SearchBar({ onSearchChange, onNavigate, autoFocus }: SearchBarPr
           onClick={() => handleTabChange('symptom')}
           className={`flex items-center gap-2.5 px-6 sm:px-8 py-3 rounded-t-[20px] text-sm sm:text-base font-bold transition-all duration-150 cursor-pointer select-none border-t-2 border-x-2 ${
             searchMode === 'symptom'
-              ? 'bg-surface-container-lowest text-primary border-primary z-30 pb-3.5 -mb-[2px] shadow-[0_-3px_12px_rgba(0,79,69,0.06)]'
+              ? 'bg-surface-container-lowest text-primary border-primary z-30 pb-3.5 -mb-[2px] shadow-[0_-3px_12px_rgba(80,170,178,0.06)]'
               : 'bg-surface-container-high/90 text-on-surface-variant hover:bg-surface-container hover:text-primary border-outline-variant/40 z-10 pb-3 mb-0'
           }`}
         >
@@ -113,7 +113,7 @@ export function SearchBar({ onSearchChange, onNavigate, autoFocus }: SearchBarPr
           onClick={() => handleTabChange('point')}
           className={`flex items-center gap-2.5 px-6 sm:px-8 py-3 rounded-t-[20px] text-sm sm:text-base font-bold transition-all duration-150 cursor-pointer select-none border-t-2 border-x-2 ${
             searchMode === 'point'
-              ? 'bg-surface-container-lowest text-primary border-primary z-30 pb-3.5 -mb-[2px] shadow-[0_-3px_12px_rgba(0,79,69,0.06)]'
+              ? 'bg-surface-container-lowest text-primary border-primary z-30 pb-3.5 -mb-[2px] shadow-[0_-3px_12px_rgba(80,170,178,0.06)]'
               : 'bg-surface-container-high/90 text-on-surface-variant hover:bg-surface-container hover:text-primary border-outline-variant/40 z-10 pb-3 mb-0'
           }`}
         >
@@ -123,7 +123,7 @@ export function SearchBar({ onSearchChange, onNavigate, autoFocus }: SearchBarPr
       </div>
 
       {/* Search Input Box with permanent dark green border */}
-      <div className="relative w-full group bg-surface-container-lowest rounded-full border-2 border-primary shadow-[0_4px_24px_rgba(0,79,69,0.08)] transition-all z-20">
+      <div className="relative w-full group bg-surface-container-lowest rounded-full border-2 border-primary shadow-[0_4px_24px_rgba(80,170,178,0.08)] transition-all z-20">
         <Search className="absolute left-6 top-1/2 -translate-y-1/2 w-6 h-6 text-primary" />
         <input
           ref={inputRef}
