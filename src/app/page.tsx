@@ -2,6 +2,7 @@
 
 import React from 'react';
 import { QuoteSection } from '@/components/QuoteSection';
+import { LocationsMap } from '@/components/LocationsMap';
 import { Quote } from 'lucide-react';
 
 export default function HomePage() {
@@ -9,6 +10,9 @@ export default function HomePage() {
     <main className="flex-grow">
       {/* Hero (Search + How It Works) */}
       <QuoteSection onSearchChange={() => {}} />
+
+      {/* Measuring & Sales Locations Container on HP */}
+      <LocationsMap />
 
       {/* Inspirational Quote Section (Placed gracefully above footer) */}
       <section className="w-full py-16 md:py-20 px-container-padding bg-surface-container-low/60 border-t border-outline-variant/20">
