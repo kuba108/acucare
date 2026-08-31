@@ -9,6 +9,7 @@ import {
   MapPin,
   Info
 } from 'lucide-react';
+import { MeridianImageMap } from '@/components/MeridianImageMap';
 
 export const metadata = {
   title: 'Celé tělo – Mapa meridiánů a akupresurních bodů | AcuCare',
@@ -118,54 +119,18 @@ export default function CeleTeloPage() {
         </div>
       </section>
 
-      {/* Section 2: Meridiány */}
+      {/* Section 2: Meridiány - Interaktivní vizualizace nad ilustrací */}
       <section className="mb-16">
         <div className="flex items-center gap-3 mb-6">
-          <div className="w-10 h-10 rounded-full bg-primary flex items-center justify-center text-on-primary">
-            <Compass className="w-5 h-5 text-primary-fixed" />
+          <div className="w-10 h-10 rounded-full bg-[#50aab2] flex items-center justify-center text-white">
+            <Compass className="w-5 h-5" />
           </div>
-          <h2 className="text-headline-md font-headline text-primary">
-            14 energetických drah (meridiánů)
+          <h2 className="text-headline-md font-headline text-[#50aab2]">
+            14 energetických drah (meridiánů) – Interaktivní mapa
           </h2>
         </div>
 
-        <div className="bg-surface-container-lowest rounded-[24px] p-8 md:p-10 soft-shadow border border-outline-variant/20 mb-8">
-          <p className="text-body-lg font-body text-on-surface-variant leading-relaxed mb-6">
-            Lidské tělo obsahuje <strong>12 řádných meridiánů</strong>, z nichž každý je pojmenován podle orgánu, 
-            ke kterému přísluší, a <strong>2 mimořádné dráhy</strong>, které probíhají středem těla. 
-            Každý meridián má svou vlastní sadu akupresurních bodů, které lze stimulovat pro obnovení 
-            volného toku energie čchi.
-          </p>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-            {[
-              { code: 'LU', name: 'Dráha plic', points: 5 },
-              { code: 'LI', name: 'Dráha tlustého střeva', points: 4 },
-              { code: 'ST', name: 'Dráha žaludku', points: 6 },
-              { code: 'SP', name: 'Dráha sleziny', points: 3 },
-              { code: 'HT', name: 'Dráha srdce', points: 1 },
-              { code: 'SI', name: 'Dráha tenkého střeva', points: 2 },
-              { code: 'UB', name: 'Dráha močového měchýře', points: 10 },
-              { code: 'KD', name: 'Dráha ledvin', points: 1 },
-              { code: 'PC', name: 'Dráha osrdečníku', points: 1 },
-              { code: 'SJ', name: 'Dráha trojitého ohřívače', points: 4 },
-              { code: 'GB', name: 'Dráha žlučníku', points: 5 },
-              { code: 'LV', name: 'Dráha jater', points: 2 },
-              { code: 'CV', name: 'Přední střední dráha', points: 4 },
-              { code: 'GV', name: 'Zadní střední dráha', points: 1 },
-            ].map((m) => (
-              <div key={m.code} className="bg-surface-container-low rounded-2xl p-4 flex items-center gap-3 border border-outline-variant/20 hover:border-primary/30 transition-colors">
-                <span className="w-10 h-10 rounded-full bg-primary flex items-center justify-center text-on-primary font-headline font-bold text-xs shrink-0">
-                  {m.code}
-                </span>
-                <div>
-                  <p className="font-bold text-primary text-sm">{m.name}</p>
-                  <p className="text-xs text-on-surface-variant">{m.points} {m.points === 1 ? 'bod' : m.points < 5 ? 'body' : 'bodů'} v katalogu</p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
+        <MeridianImageMap />
       </section>
 
       {/* Section 3: Kolik bodů existuje */}
