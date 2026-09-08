@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useState } from 'react';
+import Image from 'next/image';
 import Link from 'next/link';
 import {
   Sparkles,
@@ -40,34 +41,16 @@ export default function ChipHalmPage() {
       <div className="bg-surface-container-lowest rounded-[28px] p-8 md:p-12 soft-shadow border border-outline-variant/30 mb-16">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
           
-          {/* SVG Vector Emblem of HALM Patent with Metallic Gold Border */}
+          {/* Main HALM Patent Emblem Image (Without white box border) */}
           <div className="lg:col-span-5 flex justify-center">
-            <div className="relative w-64 h-64 md:w-72 md:h-72 rounded-full p-3 bg-gradient-to-br from-[#f3e5ab] via-[#d4af37] to-[#996515] shadow-xl flex items-center justify-center group hover:scale-105 transition-transform duration-300">
-              <div className="w-full h-full rounded-full bg-[#004f45] flex flex-col items-center justify-center p-6 text-center text-white border-2 border-[#f3e5ab]/60 relative overflow-hidden">
-                {/* Background Subtle Wave Pattern */}
-                <div className="absolute inset-0 opacity-10 bg-[radial-gradient(#d4af37_1px,transparent_1px)] [background-size:12px_12px]" />
-                
-                {/* Registered Trade Mark Emblem */}
-                <span className="absolute top-4 right-6 text-xs font-bold text-[#d4af37] border border-[#d4af37] w-6 h-6 rounded-full flex items-center justify-center">
-                  ®
-                </span>
-
-                <h2 className="text-3xl md:text-4xl font-headline font-extrabold text-[#d4af37] tracking-wider mb-1 drop-shadow-sm">
-                  HALM
-                </h2>
-                
-                <div className="w-16 h-0.5 bg-[#d4af37] my-2" />
-
-                <p className="text-xs font-bold font-body text-[#f3e5ab] uppercase tracking-widest mb-2">
-                  PATENT No. 24128
-                </p>
-
-                <div className="text-[10px] font-mono text-white/80 space-y-0.5">
-                  <p>A61N 5/06 (2006.01)</p>
-                  <p>A61F 7/00 (2006.01)</p>
-                  <p>A61B 3/00 (2006.01)</p>
-                </div>
-              </div>
+            <div className="relative w-64 h-64 md:w-72 md:h-72 drop-shadow-xl hover:scale-105 transition-transform duration-300">
+              <Image
+                src="/halm_patent_logo_transparent.png"
+                alt="HALM Patent No. 24128 Emblem"
+                fill
+                className="object-contain"
+                priority
+              />
             </div>
           </div>
 
@@ -124,7 +107,7 @@ export default function ChipHalmPage() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           
-          {/* Variant 1: Gold Rim - Qi Xu (Dodávání energie) */}
+          {/* Variant 1: Gold Rim - Qi Xu (Dodávání energie) with Visible Chip Component */}
           <div className="bg-surface-container-lowest rounded-[28px] p-8 soft-shadow border-2 border-[#d4af37]/60 flex flex-col justify-between space-y-6 relative overflow-hidden">
             <div className="space-y-4">
               <div className="flex items-center justify-between">
@@ -136,12 +119,15 @@ export default function ChipHalmPage() {
                 </span>
               </div>
 
-              {/* Graphical Chip Preview with Gold Rim */}
+              {/* Real Chip Photo with Gold Rim */}
               <div className="flex items-center gap-4 py-4">
-                <div className="w-20 h-20 rounded-full p-2 bg-gradient-to-br from-[#f3e5ab] via-[#d4af37] to-[#996515] shadow-md shrink-0 flex items-center justify-center">
-                  <div className="w-full h-full rounded-full bg-[#004f45] flex items-center justify-center text-[#d4af37] font-bold text-xs font-headline">
-                    HALM
-                  </div>
+                <div className="relative w-20 h-20 shrink-0 drop-shadow-md">
+                  <Image
+                    src="/halm_chip_gold_clean.png"
+                    alt="HALM Chip - Zlatá strana (Čchi / Qi Xu)"
+                    fill
+                    className="object-contain"
+                  />
                 </div>
                 <div>
                   <h3 className="text-headline-md font-headline text-[#8a6600] text-xl">
@@ -161,17 +147,17 @@ export default function ChipHalmPage() {
 
             <div className="pt-4 border-t border-outline-variant/30 text-xs font-body text-on-surface-variant space-y-2">
               <p className="flex items-center gap-2">
-                <span className="w-2 h-2 rounded-full bg-[#d4af37]" />
+                <span className="w-2.5 h-2.5 rounded-full bg-[#d4af37]" />
                 <strong>Účinek:</strong> Posílení, zahřátí, doplňování čchi
               </p>
               <p className="flex items-center gap-2">
-                <span className="w-2 h-2 rounded-full bg-[#d4af37]" />
+                <span className="w-2.5 h-2.5 rounded-full bg-[#d4af37]" />
                 <strong>Vhodné pro:</strong> Únavu, chlad v těle, chronické oslabení
               </p>
             </div>
           </div>
 
-          {/* Variant 2: Green Rim - Shi (Odebírání přebytku) */}
+          {/* Variant 2: Green Rim - Shi (Odebírání přebytku) with Visible Chip Component */}
           <div className="bg-surface-container-lowest rounded-[28px] p-8 soft-shadow border-2 border-[#286b33]/60 flex flex-col justify-between space-y-6 relative overflow-hidden">
             <div className="space-y-4">
               <div className="flex items-center justify-between">
@@ -183,12 +169,15 @@ export default function ChipHalmPage() {
                 </span>
               </div>
 
-              {/* Graphical Chip Preview with Green Rim */}
+              {/* Real Chip Photo with Green Rim */}
               <div className="flex items-center gap-4 py-4">
-                <div className="w-20 h-20 rounded-full p-2 bg-[#286b33] shadow-md shrink-0 flex items-center justify-center">
-                  <div className="w-full h-full rounded-full bg-[#003824] flex items-center justify-center text-white font-bold text-xs font-headline">
-                    HALM
-                  </div>
+                <div className="relative w-20 h-20 shrink-0 drop-shadow-md">
+                  <Image
+                    src="/halm_chip_green_clean.png"
+                    alt="HALM Chip - Zelená strana (Shi / Plnost)"
+                    fill
+                    className="object-contain"
+                  />
                 </div>
                 <div>
                   <h3 className="text-headline-md font-headline text-[#286b33] text-xl">
@@ -208,11 +197,11 @@ export default function ChipHalmPage() {
 
             <div className="pt-4 border-t border-outline-variant/30 text-xs font-body text-on-surface-variant space-y-2">
               <p className="flex items-center gap-2">
-                <span className="w-2 h-2 rounded-full bg-[#286b33]" />
+                <span className="w-2.5 h-2.5 rounded-full bg-[#286b33]" />
                 <strong>Účinek:</strong> Uvolnění, rozptýlení napětí, odvedení přebytku
               </p>
               <p className="flex items-center gap-2">
-                <span className="w-2 h-2 rounded-full bg-[#286b33]" />
+                <span className="w-2.5 h-2.5 rounded-full bg-[#286b33]" />
                 <strong>Vhodné pro:</strong> Akutní bolesti, křeče, zánětlivé blokády
               </p>
             </div>
@@ -221,11 +210,11 @@ export default function ChipHalmPage() {
         </div>
       </div>
 
-      {/* Section 3: Premium Double-Sided Chip (Příplatková verze HALM Duo) */}
+      {/* Section 3: Premium Double-Sided Chip (Příplatková verze HALM Duo with Interactive Real Chip Flip) */}
       <div className="bg-surface-container-lowest rounded-[28px] p-8 md:p-12 soft-shadow border border-outline-variant/30 mb-16">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
           
-          {/* Interactive 3D Flip Chip Preview */}
+          {/* Interactive 3D Flip Real Chip Preview */}
           <div className="lg:col-span-5 flex flex-col items-center text-center space-y-6">
             <span className="text-xs font-bold text-[#50aab2] uppercase tracking-wider">
               Interaktivní ukázka oboustranného chipu
@@ -241,22 +230,24 @@ export default function ChipHalmPage() {
                 flippedSide === 'green' ? 'rotate-y-180' : ''
               }`}>
                 
-                {/* Front Side: Gold Rim (Qi Xu) */}
-                <div className="absolute inset-0 w-full h-full rounded-full p-3 bg-gradient-to-br from-[#f3e5ab] via-[#d4af37] to-[#996515] shadow-xl flex items-center justify-center backface-hidden">
-                  <div className="w-full h-full rounded-full bg-[#004f45] flex flex-col items-center justify-center text-center p-4">
-                    <span className="text-xs font-bold text-[#d4af37] uppercase">Zlatá strana</span>
-                    <span className="text-xl font-headline font-extrabold text-[#d4af37]">HALM®</span>
-                    <span className="text-[10px] text-white/90 font-semibold mt-1">Čchi (Qi Xu)</span>
-                  </div>
+                {/* Front Side: Gold Chip (Qi Xu) */}
+                <div className="absolute inset-0 w-full h-full rounded-full drop-shadow-xl flex items-center justify-center backface-hidden">
+                  <Image
+                    src="/halm_chip_gold_clean.png"
+                    alt="HALM Chip Duo - Zlatá strana (Čchi)"
+                    fill
+                    className="object-contain"
+                  />
                 </div>
 
-                {/* Back Side: Green Rim (Shi) */}
-                <div className="absolute inset-0 w-full h-full rounded-full p-3 bg-[#286b33] shadow-xl flex items-center justify-center backface-hidden rotate-y-180">
-                  <div className="w-full h-full rounded-full bg-[#003824] flex flex-col items-center justify-center text-center p-4">
-                    <span className="text-xs font-bold text-emerald-400 uppercase">Zelená strana</span>
-                    <span className="text-xl font-headline font-extrabold text-white">HALM®</span>
-                    <span className="text-[10px] text-white/90 font-semibold mt-1">Shi (Plnost)</span>
-                  </div>
+                {/* Back Side: Green Chip (Shi) */}
+                <div className="absolute inset-0 w-full h-full rounded-full drop-shadow-xl flex items-center justify-center backface-hidden rotate-y-180">
+                  <Image
+                    src="/halm_chip_green_clean.png"
+                    alt="HALM Chip Duo - Zelená strana (Shi)"
+                    fill
+                    className="object-contain"
+                  />
                 </div>
 
               </div>
@@ -268,7 +259,7 @@ export default function ChipHalmPage() {
               className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-[#e8eeef] hover:bg-[#50aab2] hover:text-white text-[#50aab2] font-bold text-xs transition-all border border-outline-variant/40 cursor-pointer shadow-xs"
             >
               <RotateCw className="w-4 h-4 animate-spin-slow" />
-              <span>Otočit chip na {flippedSide === 'gold' ? 'zelenou stranu (Shi)' : 'zlatou stranu (Čchi)'}</span>
+              <span>Otočit chip na {flippedSide === 'gold' ? 'zelenou stranu (Shi / Plnost)' : 'zlatou stranu (Čchi / Qi Xu)'}</span>
             </button>
           </div>
 
@@ -285,7 +276,7 @@ export default function ChipHalmPage() {
 
             <p className="text-body-md font-body text-on-surface leading-relaxed">
               Pro maximální flexibilitu nabízíme příplatkovou oboustrannou verzi chipu HALM®. 
-              Jedna strana má zlatý okraj (dodává energii), zatímco druhá strana má zelený okraj (odebírá přebytek).
+              Jedna strana disponuje zlatým okrajem (dodává energii), zatímco druhá strana má zelený okraj (odebírá přebytek).
             </p>
 
             <div className="p-4 rounded-2xl bg-surface-container-low border border-outline-variant/30 space-y-3">
