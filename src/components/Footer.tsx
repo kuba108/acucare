@@ -31,6 +31,12 @@ export function Footer() {
             Všechny body
           </Link>
           <Link
+            href="/chip-halm"
+            className="text-on-surface-variant hover:text-[#50aab2] transition-colors text-label-md font-body"
+          >
+            Chip HALM®
+          </Link>
+          <Link
             href="/objednavka"
             className="text-on-surface-variant hover:text-[#50aab2] transition-colors text-label-md font-body"
           >
