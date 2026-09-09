@@ -1,6 +1,7 @@
 import React from 'react';
 import { notFound } from 'next/navigation';
 import { ACUPRESSURE_POINTS } from '@/data/pointsData';
+import { resolvePointLayersServer } from '@/lib/pointLayersServer';
 import { PointDetailInteractive } from '@/components/PointDetailInteractive';
 
 interface PageProps {
@@ -25,6 +26,8 @@ export default async function PointDetailPage({ params }: PageProps) {
     (p) => p.id !== point.id && p.bodyRegion === point.bodyRegion
   ).slice(0, 3);
 
+  const initialLayers = resolvePointLayersServer(point.id);
+
   return (
     <main className="flex-grow w-full max-w-[1200px] mx-auto px-container-padding py-12 md:py-16">
       {/* Header Section */}
@@ -40,7 +43,11 @@ export default async function PointDetailPage({ params }: PageProps) {
       </div>
 
       {/* Interactive Detail Layout */}
-      <PointDetailInteractive point={point} relatedPoints={relatedPoints} />
+      <PointDetailInteractive
+        point={point}
+        relatedPoints={relatedPoints}
+        initialLayers={initialLayers}
+      />
     </main>
   );
 }

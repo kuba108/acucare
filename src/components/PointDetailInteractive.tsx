@@ -8,45 +8,64 @@ import {
   Hand, Disc, ChevronRight
 } from 'lucide-react';
 import { AcupressurePoint } from '@/data/pointsData';
+import {
+  ChipVariantType,
+  CHIP_IMAGES,
+  POINT_CHIP_COORDINATES,
+  PointLayersInfo
+} from '@/data/pointLayersConfig';
 
 interface PointDetailInteractiveProps {
   point: AcupressurePoint;
   relatedPoints: AcupressurePoint[];
+  initialLayers?: PointLayersInfo;
 }
 
 type ViewMode = 'chip' | 'hand';
 
-export function PointDetailInteractive({ point, relatedPoints }: PointDetailInteractiveProps) {
+export function PointDetailInteractive({ point, relatedPoints, initialLayers }: PointDetailInteractiveProps) {
   const [selectedMode, setSelectedMode] = useState<ViewMode>('chip');
   const [hoveredMode, setHoveredMode] = useState<ViewMode | null>(null);
 
+  // Sub-selection for Chip Variants (Default: single)
+  const [selectedChipVariant, setSelectedChipVariant] = useState<ChipVariantType>('single');
+  const [hoveredChipVariant, setHoveredChipVariant] = useState<ChipVariantType | null>(null);
+
   const activeMode = hoveredMode || selectedMode;
+  const activeChipVariant = hoveredChipVariant || selectedChipVariant;
 
-  const idWithUnderscore = point.id.replace(/-/g, '_');
-  const pngChips = ['cv_12', 'cv_4', 'cv_6'];
-  const chipExt = pngChips.includes(idWithUnderscore) ? 'png' : 'jpg';
-
-  const images: Record<ViewMode, string> = {
-    chip: `/point_images_chip/${idWithUnderscore}.${chipExt}`,
-    hand: `/points_images/${idWithUnderscore}.jpg`,
+  // Hybrid layered configuration with safe fallback
+  const folderName = point.id.replace(/-/g, '_');
+  const layers: PointLayersInfo = initialLayers || {
+    folderName,
+    bodyImage: `/points/${folderName}/body.png`,
+    handOverlay: `/points/${folderName}/hand.png`,
+    fallbackImage: `/points_images/${folderName}.jpg`,
+    hasCustomLayers: false,
+    chipCoord: POINT_CHIP_COORDINATES[point.id] || { x: 50, y: 50, size: 14 },
   };
-
-  const currentImageSrc = images[activeMode];
+  const activeChip = CHIP_IMAGES[activeChipVariant];
 
   const indicationIcons = [Brain, Frown, CircleDot, Wind];
 
-  const VIEWS = [
+  const CHIP_VARIANTS: Array<{ id: ChipVariantType; label: string; sublabel: string; color: string }> = [
     {
-      id: 'chip' as ViewMode,
-      label: 'Aplikace chipu',
-      sublabel: 'AcuCare akupresurní chip',
-      icon: Disc,
+      id: 'single',
+      label: 'Halm chip jednostranný',
+      sublabel: 'Standardní verze',
+      color: '#d4af37',
     },
     {
-      id: 'hand' as ViewMode,
-      label: 'Masáž rukou',
-      sublabel: 'Manuální stimulace bodu',
-      icon: Hand,
+      id: 'duo_qi',
+      label: 'Halm Duo oboustranný chip (Čchi)',
+      sublabel: 'Režim doplňování energie',
+      color: '#d4af37',
+    },
+    {
+      id: 'duo_shi',
+      label: 'Halm Duo oboustranný chip (Shi)',
+      sublabel: 'Režim odebírání přebytku',
+      color: '#286b33',
     },
   ];
 
@@ -54,15 +73,16 @@ export function PointDetailInteractive({ point, relatedPoints }: PointDetailInte
     <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8">
       {/* Left Column (Canvas & Info) */}
       <div className="lg:col-span-8 flex flex-col gap-10">
-        {/* Main Image Card with View Badge */}
+        
+        {/* Main Image Card with Hybrid Layer Stacking */}
         <section className="bg-surface-container-lowest rounded-[24px] soft-shadow overflow-hidden border border-outline-variant/30 relative group">
           
           {/* Active Mode Badge on top left of image */}
-          <div className="absolute top-4 left-4 z-20 px-4 py-2 rounded-full bg-surface-container-lowest/90 backdrop-blur-md border border-outline-variant/40 shadow-sm flex items-center gap-2 text-xs font-bold text-[#50aab2]">
+          <div className="absolute top-4 left-4 z-30 px-4 py-2 rounded-full bg-surface-container-lowest/95 backdrop-blur-md border border-outline-variant/40 shadow-sm flex items-center gap-2 text-xs font-bold text-[#50aab2]">
             {activeMode === 'chip' ? (
               <>
                 <Disc className="w-4 h-4 text-[#50aab2]" />
-                <span>Aplikace chipu</span>
+                <span>{activeChip.label}</span>
               </>
             ) : (
               <>
@@ -72,16 +92,65 @@ export function PointDetailInteractive({ point, relatedPoints }: PointDetailInte
             )}
           </div>
 
+          {/* Canvas with Aspect-Square Ratio */}
           <div className="relative w-full aspect-square overflow-hidden rounded-[24px] bg-[#e8eeef]">
+            
+            {/* LAYER 1: Základní fotografie těla (body.jpg s fallbackem na stávající fotku) */}
             <Image
-              key={currentImageSrc}
-              src={currentImageSrc}
-              alt={`Snímek bodu ${point.code} - ${point.name} (${activeMode === 'chip' ? 'Aplikace chipu' : 'Masáž rukou'})`}
+              src={layers.bodyImage}
+              onError={(e) => {
+                // Bezpečný fallback, pokud nová složka /points/[id]/ ještě neobsahuje body.jpg
+                const target = e.target as HTMLImageElement;
+                target.src = layers.fallbackImage;
+              }}
+              alt={`Snímek těla pro bod ${point.code} - ${point.name}`}
               fill
-              className="object-contain transition-opacity duration-300"
+              className="object-contain select-none"
               sizes="(max-width: 1024px) 100vw, 66vw"
               priority
             />
+
+            {/* LAYER 2: Masáž rukou (hand.png - full-frame transparentní vrstva) */}
+            <div
+              className={`absolute inset-0 w-full h-full pointer-events-none transition-opacity duration-300 z-10 ${
+                activeMode === 'hand' ? 'opacity-100' : 'opacity-0'
+              }`}
+            >
+              <Image
+                src={layers.handOverlay}
+                onError={(e) => {
+                  // Fallback na stávající fotku s rukou
+                  const target = e.target as HTMLImageElement;
+                  target.src = layers.fallbackImage;
+                }}
+                alt={`Masáž rukou pro bod ${point.code}`}
+                fill
+                className="object-contain select-none"
+                sizes="(max-width: 1024px) 100vw, 66vw"
+              />
+            </div>
+
+            {/* LAYER 3: Aplikace chipu (Procentuálně usazený univerzální chip s plynulou záměnou) */}
+            {activeMode === 'chip' && (
+              <div
+                style={{
+                  left: `${layers.chipCoord.x}%`,
+                  top: `${layers.chipCoord.y}%`,
+                  width: `${layers.chipCoord.size ?? 13}%`,
+                  transform: 'translate(-50%, -50%)',
+                }}
+                className="absolute aspect-square pointer-events-none z-20 drop-shadow-lg transition-all duration-300 animate-fade-in"
+              >
+                <Image
+                  key={activeChipVariant}
+                  src={activeChip.src}
+                  alt={activeChip.label}
+                  fill
+                  className="object-contain select-none"
+                />
+              </div>
+            )}
+
           </div>
         </section>
 
@@ -201,52 +270,142 @@ export function PointDetailInteractive({ point, relatedPoints }: PointDetailInte
           </h3>
 
           <div className="space-y-3">
-            {VIEWS.map((view) => {
-              const isActive = activeMode === view.id;
-              const isSelected = selectedMode === view.id;
-              const Icon = view.icon;
+            {/* SECTION 1: Aplikace chipu (Parent Card with Sub-options) */}
+            <div className={`rounded-2xl border transition-all ${
+              activeMode === 'chip'
+                ? 'bg-[#e8eeef] border-[#50aab2] shadow-sm'
+                : 'bg-surface-container-low border-outline-variant/30'
+            }`}>
+              {/* Main Chip Card Header */}
+              <button
+                type="button"
+                onClick={() => setSelectedMode('chip')}
+                onMouseEnter={() => setHoveredMode('chip')}
+                onMouseLeave={() => setHoveredMode(null)}
+                className="w-full p-4 flex items-center justify-between gap-3 cursor-pointer select-none text-left"
+              >
+                <div className="flex items-center gap-3.5">
+                  <span
+                    className={`w-10 h-10 rounded-full font-headline font-bold text-xs flex items-center justify-center shrink-0 transition-colors ${
+                      activeMode === 'chip'
+                        ? 'bg-[#50aab2] text-white shadow-xs'
+                        : 'bg-surface-container text-[#50aab2]'
+                    }`}
+                  >
+                    <Disc className="w-5 h-5" />
+                  </span>
+                  <div>
+                    <p className={`font-bold text-sm font-body transition-colors ${activeMode === 'chip' ? 'text-[#50aab2]' : 'text-on-surface'}`}>
+                      Aplikace chipu
+                    </p>
+                    <p className="text-xs font-body text-on-surface-variant">
+                      AcuCare akupresurní chip
+                    </p>
+                  </div>
+                </div>
 
-              return (
-                <button
-                  key={view.id}
-                  type="button"
-                  onClick={() => setSelectedMode(view.id)}
-                  onMouseEnter={() => setHoveredMode(view.id)}
-                  onMouseLeave={() => setHoveredMode(null)}
-                  className={`w-full rounded-2xl p-4 flex items-center justify-between gap-3 border transition-all cursor-pointer select-none text-left ${
-                    isActive
-                      ? 'bg-[#e8eeef] border-[#50aab2] shadow-sm'
-                      : 'bg-surface-container-low hover:bg-[#e8eeef]/60 border-outline-variant/30'
+                <span
+                  className={`w-3.5 h-3.5 rounded-full shrink-0 transition-all ${
+                    selectedMode === 'chip' ? 'bg-[#50aab2] scale-110 ring-2 ring-[#50aab2]/30' : 'bg-outline-variant/40'
                   }`}
-                >
-                  <div className="flex items-center gap-3.5">
-                    <span
-                      className={`w-10 h-10 rounded-full font-headline font-bold text-xs flex items-center justify-center shrink-0 transition-colors ${
-                        isActive
-                          ? 'bg-[#50aab2] text-white'
-                          : 'bg-surface-container text-[#50aab2]'
+                />
+              </button>
+
+              {/* Sub-cards: 3 Chip Options (Halm chip, Halm Duo Čchi, Halm Duo Shi) */}
+              <div className="px-3 pb-3 pt-1 space-y-2 border-t border-[#50aab2]/20">
+                {CHIP_VARIANTS.map((cv) => {
+                  const isVariantActive = activeChipVariant === cv.id;
+                  const isVariantSelected = selectedChipVariant === cv.id;
+
+                  return (
+                    <div
+                      key={cv.id}
+                      onClick={() => {
+                        setSelectedChipVariant(cv.id);
+                        setSelectedMode('chip');
+                      }}
+                      onMouseEnter={() => {
+                        setHoveredChipVariant(cv.id);
+                        setHoveredMode('chip');
+                      }}
+                      onMouseLeave={() => {
+                        setHoveredChipVariant(null);
+                        setHoveredMode(null);
+                      }}
+                      className={`w-full rounded-xl p-3 flex items-center justify-between gap-3 border transition-all cursor-pointer select-none text-left ${
+                        isVariantActive
+                          ? 'bg-surface-container-lowest border-[#50aab2] shadow-xs'
+                          : 'bg-surface-container-lowest/60 hover:bg-surface-container-lowest border-outline-variant/30'
                       }`}
                     >
-                      <Icon className="w-5 h-5" />
-                    </span>
-                    <div>
-                      <p className={`font-bold text-sm font-body transition-colors ${isActive ? 'text-[#50aab2]' : 'text-on-surface'}`}>
-                        {view.label}
-                      </p>
-                      <p className="text-xs font-body text-on-surface-variant">
-                        {view.sublabel}
-                      </p>
-                    </div>
-                  </div>
+                      <div className="flex items-center gap-3">
+                        {/* Small Color Badge dot */}
+                        <span
+                          className="w-3 h-3 rounded-full shrink-0 shadow-2xs"
+                          style={{ backgroundColor: cv.color }}
+                        />
+                        <div>
+                          <p className={`font-bold text-xs font-body transition-colors ${isVariantActive ? 'text-[#50aab2]' : 'text-on-surface'}`}>
+                            {cv.label}
+                          </p>
+                          <p className="text-[11px] font-body text-on-surface-variant">
+                            {cv.sublabel}
+                          </p>
+                        </div>
+                      </div>
 
-                  <span
-                    className={`w-3.5 h-3.5 rounded-full shrink-0 transition-all ${
-                      isSelected ? 'bg-[#50aab2] scale-110 ring-2 ring-[#50aab2]/30' : 'bg-outline-variant/40'
-                    }`}
-                  />
-                </button>
-              );
-            })}
+                      {/* Right selection dot */}
+                      <span
+                        className={`w-2.5 h-2.5 rounded-full shrink-0 transition-all ${
+                          isVariantSelected && selectedMode === 'chip'
+                            ? 'bg-[#50aab2] ring-2 ring-[#50aab2]/30 scale-125'
+                            : 'bg-outline-variant/40'
+                        }`}
+                      />
+                    </div>
+                  );
+                })}
+              </div>
+            </div>
+
+            {/* SECTION 2: Masáž rukou Card */}
+            <button
+              type="button"
+              onClick={() => setSelectedMode('hand')}
+              onMouseEnter={() => setHoveredMode('hand')}
+              onMouseLeave={() => setHoveredMode(null)}
+              className={`w-full rounded-2xl p-4 flex items-center justify-between gap-3 border transition-all cursor-pointer select-none text-left ${
+                activeMode === 'hand'
+                  ? 'bg-[#e8eeef] border-[#50aab2] shadow-sm'
+                  : 'bg-surface-container-low hover:bg-[#e8eeef]/60 border-outline-variant/30'
+              }`}
+            >
+              <div className="flex items-center gap-3.5">
+                <span
+                  className={`w-10 h-10 rounded-full font-headline font-bold text-xs flex items-center justify-center shrink-0 transition-colors ${
+                    activeMode === 'hand'
+                      ? 'bg-[#50aab2] text-white'
+                      : 'bg-surface-container text-[#50aab2]'
+                  }`}
+                >
+                  <Hand className="w-5 h-5" />
+                </span>
+                <div>
+                  <p className={`font-bold text-sm font-body transition-colors ${activeMode === 'hand' ? 'text-[#50aab2]' : 'text-on-surface'}`}>
+                    Masáž rukou
+                  </p>
+                  <p className="text-xs font-body text-on-surface-variant">
+                    Manuální stimulace bodu
+                  </p>
+                </div>
+              </div>
+
+              <span
+                className={`w-3.5 h-3.5 rounded-full shrink-0 transition-all ${
+                  selectedMode === 'hand' ? 'bg-[#50aab2] scale-110 ring-2 ring-[#50aab2]/30' : 'bg-outline-variant/40'
+                }`}
+              />
+            </button>
           </div>
         </div>
 
