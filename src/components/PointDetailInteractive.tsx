@@ -11,7 +11,7 @@ import { AcupressurePoint } from '@/data/pointsData';
 import {
   ChipVariantType,
   CHIP_IMAGES,
-  POINT_CHIP_COORDINATES,
+  normalizeChipCoordinates,
   PointLayersInfo
 } from '@/data/pointLayersConfig';
 
@@ -42,7 +42,7 @@ export function PointDetailInteractive({ point, relatedPoints, initialLayers }: 
     handOverlay: `/points/${folderName}/hand.png`,
     fallbackImage: `/points_images/${folderName}.jpg`,
     hasCustomLayers: false,
-    chipCoord: POINT_CHIP_COORDINATES[point.id] || { x: 50, y: 50, size: 14 },
+    chips: normalizeChipCoordinates(point.id),
   };
   const activeChip = CHIP_IMAGES[activeChipVariant];
 
@@ -130,26 +130,28 @@ export function PointDetailInteractive({ point, relatedPoints, initialLayers }: 
               />
             </div>
 
-            {/* LAYER 3: Aplikace chipu (Procentuálně usazený univerzální chip s plynulou záměnou) */}
-            {activeMode === 'chip' && (
+            {/* LAYER 3: Aplikace chipu (Podpora pro 1 i 2 chipy s nastavitelnou velikostí a pozicí) */}
+            {activeMode === 'chip' && layers.chips.map((chipCoord, idx) => (
               <div
+                key={`chip-${idx}`}
                 style={{
-                  left: `${layers.chipCoord.x}%`,
-                  top: `${layers.chipCoord.y}%`,
-                  width: `${layers.chipCoord.size ?? 13}%`,
+                  left: `${chipCoord.x}%`,
+                  top: `${chipCoord.y}%`,
+                  width: `${chipCoord.size ?? 14}%`,
                   transform: 'translate(-50%, -50%)',
                 }}
                 className="absolute aspect-square pointer-events-none z-20 drop-shadow-lg transition-all duration-300 animate-fade-in"
+                title={chipCoord.label}
               >
                 <Image
-                  key={activeChipVariant}
+                  key={`${activeChipVariant}-${idx}`}
                   src={activeChip.src}
-                  alt={activeChip.label}
+                  alt={chipCoord.label || activeChip.label}
                   fill
                   className="object-contain select-none"
                 />
               </div>
-            )}
+            ))}
 
           </div>
         </section>

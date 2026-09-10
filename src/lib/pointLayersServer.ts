@@ -1,18 +1,18 @@
 import fs from 'fs';
 import path from 'path';
 import {
-  POINT_CHIP_COORDINATES,
+  normalizeChipCoordinates,
   PointLayersInfo
 } from '@/data/pointLayersConfig';
 
 /**
  * Server-only helper to inspect public/points/[folderName]
- * and resolve existing image files (.png, .jpg, etc.)
+ * and resolve existing image files (.png, .jpg, etc.) and chip coordinates.
  */
 export function resolvePointLayersServer(pointId: string): PointLayersInfo {
   const folderName = pointId.replace(/-/g, '_');
   const fallbackImage = `/points_images/${folderName}.jpg`;
-  const coord = POINT_CHIP_COORDINATES[pointId] || { x: 50, y: 50, size: 14 };
+  const chips = normalizeChipCoordinates(pointId);
 
   const pointsDir = path.join(process.cwd(), 'public', 'points', folderName);
   
@@ -47,6 +47,6 @@ export function resolvePointLayersServer(pointId: string): PointLayersInfo {
     handOverlay,
     fallbackImage,
     hasCustomLayers,
-    chipCoord: coord,
+    chips,
   };
 }
