@@ -149,7 +149,7 @@ export const POINT_CHIP_COORDINATES: Record<string, PointChipCoordinate | PointC
   'sj-17': { x: 48, y: 50, size: 15, label: 'SJ 17 (Za ušním lalůčkem)' }, // Detail za uchem
 
   // === DRÁHA ŽLUČNÍKU (GB) ===
-  'gb-2': { x: 48, y: 50, size: 14, label: 'GB 2 (Před uchem)' }, // Detail ucha
+  'gb-2': { x: 50, y: 71, size: 8, label: 'GB 2 (Před uchem)' }, // Detail ucha
   'gb-12': { x: 50, y: 50, size: 14, label: 'GB 12 (Za uchem na kosti)' }, // Detail za uchem
   'gb-14': [ // Párový bod nad oběma obočími (2 chipy)
     { x: 44, y: 42, size: 12, label: 'Levý GB 14' },
@@ -159,7 +159,7 @@ export const POINT_CHIP_COORDINATES: Record<string, PointChipCoordinate | PointC
     { x: 38, y: 48, size: 14, label: 'Levý GB 20' },
     { x: 62, y: 48, size: 14, label: 'Pravý GB 20' },
   ],
-  'gb-30': { x: 50, y: 48, size: 13, label: 'GB 30 (Hýždě / kyčel)' }, // Celkový pohled na bok
+  'gb-30': { x: 52, y: 52, size: 10, label: 'GB 30 (Hýždě / kyčel)' }, // Celkový pohled na bok
 
   // === DRÁHA JATER (LV) ===
   'lv-3': { x: 50, y: 50, size: 18, label: 'LV 3 (Hřbet nohy mezi prsty)' }, // Velký detail nártu
@@ -168,11 +168,11 @@ export const POINT_CHIP_COORDINATES: Record<string, PointChipCoordinate | PointC
   // === PŘEDNÍ STŘEDNÍ DRÁHA (CV / REN MAI) ===
   'cv-4': { x: 50, y: 52, size: 14, label: 'CV 4 (Podbřišek)' }, // Širší záběr břicha
   'cv-6': { x: 50, y: 48, size: 14, label: 'CV 6 (Moře čchi pod pupkem)' }, // Širší záběr břicha
-  'cv-12': { x: 50, y: 50, size: 14, label: 'CV 12 (Střed břicha nad pupkem)' }, // Širší záběr břicha
-  'cv-17': { x: 50, y: 48, size: 14, label: 'CV 17 (Střed hrudní kosti)' }, // Širší záběr hrudníku
+  'cv-12': { x: 50, y: 60, size: 10, label: 'CV 12 (Střed břicha nad pupkem)' }, // Širší záběr břicha
+  'cv-17': { x: 50, y: 58, size: 10, label: 'CV 17 (Střed hrudní kosti)' }, // Širší záběr hrudníku
 
   // === ZADNÍ STŘEDNÍ DRÁHA (GV / DU MAI) ===
-  'gv-26': { x: 50, y: 48, size: 11, label: 'GV 26 (Rýha pod nosem)' }, // Střední detail obličeje
+  'gv-26': { x: 50, y: 53, size: 10, label: 'GV 26 (Rýha pod nosem)' }, // Střední detail obličeje
 };
 
 /**
