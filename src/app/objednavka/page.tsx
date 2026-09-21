@@ -80,10 +80,10 @@ export default function ObjednavkaPage() {
           Nezávazná poptávka & Objednávka
         </span>
         <h1 className="text-headline-lg-mobile md:text-headline-xl font-headline text-[#50aab2] mb-6">
-          Mám zájem o Henex přístroj
+          Mám zájem o Halm chip
         </h1>
         <p className="text-body-lg font-body text-on-surface-variant leading-relaxed max-w-xl mx-auto">
-          Vyplňte kontaktní formulář níže a náš tým se vám ozve zpět s nabídkou přístroje Henex.
+          Vyplňte kontaktní formulář níže a náš tým se vám ozve zpět s nabídkou Haml chipů.
         </p>
       </div>
 
@@ -184,7 +184,7 @@ export default function ObjednavkaPage() {
                       name="telefon"
                       value={formData.telefon}
                       onChange={handleChange}
-                      placeholder="+420 777 123 456"
+                      placeholder="+420 722 924 848"
                       className="w-full bg-surface-container-low/60 border border-outline-variant rounded-2xl py-3.5 pl-12 pr-4 text-on-surface focus:outline-none focus:border-[#50aab2] focus:ring-1 focus:ring-[#50aab2] transition-colors"
                     />
                   </div>

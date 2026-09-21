@@ -30,7 +30,7 @@ export default function AboutAcupressurePage() {
           Průvodce tradiční medicínou
         </span>
         <h1 className="text-headline-lg-mobile md:text-headline-xl font-headline text-primary mb-6">
-          Více o akupresuře a bodech
+          Více o energetických bodech
         </h1>
         <p className="text-body-lg font-body text-on-surface-variant leading-relaxed">
           Tradiční čínská medicína (TCM) a její léčebné metody jsou tisíce let staré.<br/>
@@ -136,7 +136,7 @@ export default function AboutAcupressurePage() {
             <Compass className="w-5 h-5 text-primary-fixed" />
           </div>
           <h2 className="text-headline-md font-headline text-primary">
-            Meridiány a akupresurní body
+            Meridiány a energetické body
           </h2>
         </div>
 
@@ -168,7 +168,7 @@ export default function AboutAcupressurePage() {
             <div>
               <h3 className="text-headline-md font-headline text-primary text-xl mb-4 flex items-center gap-2">
                 <Sparkles className="w-5 h-5 text-secondary" />
-                Co je to Akupresurní bod?
+                Co je to energetický bod?
               </h3>
               <p className="text-body-md font-body text-on-surface-variant leading-relaxed mb-4">
                 Akupresurní bod je specifické místo na meridiánu, kde se <strong>energie čchi dostává blíže k povrchu těla</strong>. 
@@ -392,7 +392,11 @@ export default function AboutAcupressurePage() {
               </li>
               <li className="flex items-start gap-3">
                 <span className="w-6 h-6 rounded-full bg-secondary-container text-on-secondary-container flex items-center justify-center font-bold text-xs shrink-0 mt-0.5">3</span>
-                <span><strong>Doba trvání:</strong> Bod stimulujte 1 až 3 minuty jemnými krouživými pohyby nebo střídavým stlačováním. Postup můžete opakovat 2–3× denně.</span>
+                <span><strong>Umístění Haml chipů:</strong> Nalepte Halm chip dle obrázku (všechny body) na energetický bod vašeho těla.</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <span className="w-6 h-6 rounded-full bg-secondary-container text-on-secondary-container flex items-center justify-center font-bold text-xs shrink-0 mt-0.5">4</span>
+                <span><strong>Doba stimulace:</strong> 30 minut až 3 hodiny</span>
               </li>
             </ul>
           </div>
@@ -410,8 +414,8 @@ export default function AboutAcupressurePage() {
                 </p>
               </div>
               <ul className="list-disc list-inside text-sm font-body text-on-surface-variant space-y-1.5 ml-2">
-                <li>Nestlačujte místa s otevřenými ranami, záněty, popáleninami či křečovými žilami.</li>
-                <li>Akupresura doplňuje zdravý životní styl, nenahrazuje však neodkladnou lékařskou péči při akutních vážných stavech.</li>
+                <li>Delší dobu stimulace energetického bodu konzultujte s lékařem.</li>
+                <li>V těhotenstí vždy konzultujte s lékařem.</li>
               </ul>
             </div>
           </div>

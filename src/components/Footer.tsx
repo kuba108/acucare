@@ -46,7 +46,7 @@ export function Footer() {
 
         {/* Copyright */}
         <div className="text-on-surface text-body-md font-body text-center md:text-right">
-          © 2024 AcuCare. Holistická cesta k rovnováze.
+          © 2024 AcuCare. Žijeme na základě nedokonalosti.
         </div>
       </div>
     </footer>
