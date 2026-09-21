@@ -23,6 +23,19 @@ export function QuoteSection({ onSearchChange }: QuoteSectionProps) {
         </div>
 
         <div className="relative z-20 w-full max-w-2xl mx-auto flex flex-col items-center">
+          {/* Hero Motto */}
+          <div className="text-center mb-8 md:mb-10 max-w-xl">
+            <h1 className="font-headline text-2xl sm:text-3xl md:text-4xl text-[#50aab2] tracking-tight font-bold leading-tight">
+              Podstata lidské existence
+            </h1>
+            <p className="font-headline text-2xl sm:text-3xl md:text-4xl text-[#50aab2] tracking-tight font-bold leading-tight">
+              objev
+            </p>
+            <p className="font-headline text-2xl sm:text-3xl md:text-4xl text-[#50aab2] tracking-tight font-bold leading-tight">
+              Rezonanční vlna je energií života<sup className="text-xs sm:text-sm font-bold ml-1 align-super">®</sup>
+            </p>
+          </div>
+
           {/* Search Input directly in Hero */}
           <div className="w-full">
             <SearchBar onSearchChange={onSearchChange} />
