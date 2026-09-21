@@ -28,12 +28,12 @@ export default function ChipHalmPage() {
           Patentovaná technologie
         </span>
         <h1 className="text-headline-lg-mobile md:text-headline-xl font-headline text-[#50aab2] mb-6">
-          Akupresurní chip HALM®
+          Energetický chip HALM®
         </h1>
         <p className="text-body-lg font-body text-on-surface-variant leading-relaxed">
-          Český patentovaný akupresurní chip <strong>HALM® (Patent No. 24128)</strong> představuje šetrnou, 
-          neinvazivní alternativu k tradiční akupunkturní jehle. Pomocí cíleného působení harmonizuje 
-          tok energie čchi v meridiánech.
+          Český patentovaný energetický chip <strong>HALM® (Patent No. 24128)</strong> představuje šetrnou, 
+          neinvazivní alternativu k tradiční akupunkturní jehle. Pomocí cílené stimulace energetických bodů harmonizuje 
+          tok energie čchi (Qi) v meridiánech.
         </p>
       </div>
 
@@ -66,8 +66,8 @@ export default function ChipHalmPage() {
             </h2>
 
             <p className="text-body-md font-body text-on-surface leading-relaxed">
-              Chip HALM® využívá jemných biorytmických a termoelektrických vlastností pro aktivaci akupresurních bodů. 
-              Na rozdíl od jehel je aplikace zcela bezbolestná, hygienická a vhodná pro dlouhodobé působení během běžného dne.
+              Chip HALM® využívá jemných biorytmických a termoelektrických vlastností pro aktivaci energetických bodů. 
+              Na rozdíl od jehel je aplikace zcela bezbolestná a vhodná pro dlouhodobé působení během běžného dne.
             </p>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
@@ -91,126 +91,7 @@ export default function ChipHalmPage() {
         </div>
       </div>
 
-      {/* Section 2: 2 Režimy působení (Čchi vs Shi) */}
-      <div className="mb-16">
-        <div className="text-center max-w-2xl mx-auto mb-10">
-          <span className="text-[#50aab2] font-body text-label-md uppercase tracking-widest mb-2 inline-block font-semibold">
-            Tradiční čínská medicína
-          </span>
-          <h2 className="text-headline-md font-headline text-[#50aab2]">
-            Dva režimy působení podle stavu bodu
-          </h2>
-          <p className="text-body-md font-body text-on-surface-variant mt-2">
-            Čínská medicína rozlišuje stav nedostatku (Xu) a stav přebytku (Shi). Chip HALM® existuje ve dvou variantách pro přesnou harmonizaci.
-          </p>
-        </div>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          
-          {/* Variant 1: Gold Rim - Qi Xu (Dodávání energie) with Visible Chip Component */}
-          <div className="bg-surface-container-lowest rounded-[28px] p-8 soft-shadow border-2 border-[#d4af37]/60 flex flex-col justify-between space-y-6 relative overflow-hidden">
-            <div className="space-y-4">
-              <div className="flex items-center justify-between">
-                <span className="px-3.5 py-1 rounded-full bg-[#f3e5ab] text-[#8a6600] font-bold text-xs font-body uppercase tracking-wider">
-                  Qi Xu (Nedostatek)
-                </span>
-                <span className="w-8 h-8 rounded-full bg-[#d4af37] text-white flex items-center justify-center font-bold text-xs">
-                  1
-                </span>
-              </div>
-
-              {/* Real Chip Photo with Gold Rim */}
-              <div className="flex items-center gap-4 py-4">
-                <div className="relative w-20 h-20 shrink-0 drop-shadow-md">
-                  <Image
-                    src="/halm_chip_gold_clean.png"
-                    alt="HALM Chip - Zlatá strana (Čchi / Qi Xu)"
-                    fill
-                    className="object-contain"
-                  />
-                </div>
-                <div>
-                  <h3 className="text-headline-md font-headline text-[#8a6600] text-xl">
-                    Zlatý okraj – Čchi (Qi Xu)
-                  </h3>
-                  <p className="text-xs text-on-surface-variant font-semibold">
-                    Režim doplňování a posilování energie
-                  </p>
-                </div>
-              </div>
-
-              <p className="text-body-md font-body text-on-surface leading-relaxed">
-                Používá se při <strong>oslabení, únavě a chronických potížích</strong>. 
-                Zlatý okraj pomáhá doplňovat chybějící čchi (Qi) do akupresurního bodu a povzbuzuje oslabené orgány.
-              </p>
-            </div>
-
-            <div className="pt-4 border-t border-outline-variant/30 text-xs font-body text-on-surface-variant space-y-2">
-              <p className="flex items-center gap-2">
-                <span className="w-2.5 h-2.5 rounded-full bg-[#d4af37]" />
-                <strong>Účinek:</strong> Posílení, zahřátí, doplňování čchi
-              </p>
-              <p className="flex items-center gap-2">
-                <span className="w-2.5 h-2.5 rounded-full bg-[#d4af37]" />
-                <strong>Vhodné pro:</strong> Únavu, chlad v těle, chronické oslabení
-              </p>
-            </div>
-          </div>
-
-          {/* Variant 2: Green Rim - Shi (Odebírání přebytku) with Visible Chip Component */}
-          <div className="bg-surface-container-lowest rounded-[28px] p-8 soft-shadow border-2 border-[#286b33]/60 flex flex-col justify-between space-y-6 relative overflow-hidden">
-            <div className="space-y-4">
-              <div className="flex items-center justify-between">
-                <span className="px-3.5 py-1 rounded-full bg-[#d6f2f5] text-[#24656b] font-bold text-xs font-body uppercase tracking-wider">
-                  Shi (Plnost)
-                </span>
-                <span className="w-8 h-8 rounded-full bg-[#286b33] text-white flex items-center justify-center font-bold text-xs">
-                  2
-                </span>
-              </div>
-
-              {/* Real Chip Photo with Green Rim */}
-              <div className="flex items-center gap-4 py-4">
-                <div className="relative w-20 h-20 shrink-0 drop-shadow-md">
-                  <Image
-                    src="/halm_chip_green_clean.png"
-                    alt="HALM Chip - Zelená strana (Shi / Plnost)"
-                    fill
-                    className="object-contain"
-                  />
-                </div>
-                <div>
-                  <h3 className="text-headline-md font-headline text-[#286b33] text-xl">
-                    Zelený okraj – Shi (Plnost)
-                  </h3>
-                  <p className="text-xs text-on-surface-variant font-semibold">
-                    Režim odebírání a rozptylování přebytku
-                  </p>
-                </div>
-              </div>
-
-              <p className="text-body-md font-body text-on-surface leading-relaxed">
-                Používá se při <strong>akutním napětí, blokádách a přeplnění</strong>. 
-                Zelený okraj pomáhá odebírat přebytečnou nahromaděnou energii, uvolňovat zánětlivé křeče a tišit bolest.
-              </p>
-            </div>
-
-            <div className="pt-4 border-t border-outline-variant/30 text-xs font-body text-on-surface-variant space-y-2">
-              <p className="flex items-center gap-2">
-                <span className="w-2.5 h-2.5 rounded-full bg-[#286b33]" />
-                <strong>Účinek:</strong> Uvolnění, rozptýlení napětí, odvedení přebytku
-              </p>
-              <p className="flex items-center gap-2">
-                <span className="w-2.5 h-2.5 rounded-full bg-[#286b33]" />
-                <strong>Vhodné pro:</strong> Akutní bolesti, křeče, zánětlivé blokády
-              </p>
-            </div>
-          </div>
-
-        </div>
-      </div>
-
-      {/* Section 3: Premium Double-Sided Chip (Příplatková verze HALM Duo with Interactive Real Chip Flip) */}
+       {/* Section 3: Premium Double-Sided Chip (Příplatková verze HALM Duo with Interactive Real Chip Flip) */}
       <div className="bg-surface-container-lowest rounded-[28px] p-8 md:p-12 soft-shadow border border-outline-variant/30 mb-16">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
           
@@ -276,7 +157,7 @@ export default function ChipHalmPage() {
 
             <p className="text-body-md font-body text-on-surface leading-relaxed">
               Pro maximální flexibilitu nabízíme příplatkovou oboustrannou verzi chipu HALM®. 
-              Jedna strana disponuje zlatým okrajem (dodává energii), zatímco druhá strana má zelený okraj (odebírá přebytek).
+              Jedna strana disponuje zlatým okrajem (dodává energii), zatímco druhá strana má zelený okraj (odebírá přebytek energie).
             </p>
 
             <div className="p-4 rounded-2xl bg-surface-container-low border border-outline-variant/30 space-y-3">
@@ -298,6 +179,125 @@ export default function ChipHalmPage() {
                 <span>Mám zájem o oboustranný chip HALM®</span>
                 <ArrowRight className="w-5 h-5" />
               </Link>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      {/* Section 2: 2 Režimy působení (Čchi vs Shi) */}
+      <div className="mb-16">
+        <div className="text-center max-w-2xl mx-auto mb-10">
+          <span className="text-[#50aab2] font-body text-label-md uppercase tracking-widest mb-2 inline-block font-semibold">
+            Tradiční čínská medicína
+          </span>
+          <h2 className="text-headline-md font-headline text-[#50aab2]">
+            Dva režimy působení podle stavu bodu
+          </h2>
+          <p className="text-body-md font-body text-on-surface-variant mt-2">
+            Čínská medicína rozlišuje stav nedostatku (Xu) a stav přebytku (Shi). Chip HALM® existuje ve dvou variantách pro přesnou harmonizaci.
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          
+          {/* Variant 1: Gold Rim - Qi Xu (Dodávání energie) with Visible Chip Component */}
+          <div className="bg-surface-container-lowest rounded-[28px] p-8 soft-shadow border-2 border-[#d4af37]/60 flex flex-col justify-between space-y-6 relative overflow-hidden">
+            <div className="space-y-4">
+              <div className="flex items-center justify-between">
+                <span className="px-3.5 py-1 rounded-full bg-[#f3e5ab] text-[#8a6600] font-bold text-xs font-body uppercase tracking-wider">
+                  Qi Xu (Nedostatek)
+                </span>
+                <span className="w-8 h-8 rounded-full bg-[#d4af37] text-white flex items-center justify-center font-bold text-xs">
+                  1
+                </span>
+              </div>
+
+              {/* Real Chip Photo with Gold Rim */}
+              <div className="flex items-center gap-4 py-4">
+                <div className="relative w-20 h-20 shrink-0 drop-shadow-md">
+                  <Image
+                    src="/halm_chip_gold_clean.png"
+                    alt="HALM Chip - Zlatá strana (Čchi / Qi Xu)"
+                    fill
+                    className="object-contain"
+                  />
+                </div>
+                <div>
+                  <h3 className="text-headline-md font-headline text-[#8a6600] text-xl">
+                    Zlatý okraj – Čchi (Qi Xu)
+                  </h3>
+                  <p className="text-xs text-on-surface-variant font-semibold">
+                    Režim doplňování a posilování energie
+                  </p>
+                </div>
+              </div>
+
+              <p className="text-body-md font-body text-on-surface leading-relaxed">
+                Používá se při <strong>oslabení, únavě a chronických potížích</strong>. 
+                Zlatý okraj pomáhá doplňovat chybějící čchi (Qi Xu) do energetických bodu a povzbuzuje oslabené orgány.
+              </p>
+            </div>
+
+            <div className="pt-4 border-t border-outline-variant/30 text-xs font-body text-on-surface-variant space-y-2">
+              <p className="flex items-center gap-2">
+                <span className="w-2.5 h-2.5 rounded-full bg-[#d4af37]" />
+                <strong>Účinek:</strong> Posílení, zahřátí, doplňování čchi
+              </p>
+              <p className="flex items-center gap-2">
+                <span className="w-2.5 h-2.5 rounded-full bg-[#d4af37]" />
+                <strong>Vhodné pro:</strong> Únavu, chlad v těle, chronické oslabení
+              </p>
+            </div>
+          </div>
+
+          {/* Variant 2: Green Rim - Shi (Odebírání přebytku) with Visible Chip Component */}
+          <div className="bg-surface-container-lowest rounded-[28px] p-8 soft-shadow border-2 border-[#286b33]/60 flex flex-col justify-between space-y-6 relative overflow-hidden">
+            <div className="space-y-4">
+              <div className="flex items-center justify-between">
+                <span className="px-3.5 py-1 rounded-full bg-[#d6f2f5] text-[#24656b] font-bold text-xs font-body uppercase tracking-wider">
+                  Shi (Plnost)
+                </span>
+                <span className="w-8 h-8 rounded-full bg-[#286b33] text-white flex items-center justify-center font-bold text-xs">
+                  2
+                </span>
+              </div>
+
+              {/* Real Chip Photo with Green Rim */}
+              <div className="flex items-center gap-4 py-4">
+                <div className="relative w-20 h-20 shrink-0 drop-shadow-md">
+                  <Image
+                    src="/halm_chip_green_clean.png"
+                    alt="HALM Chip - Zelená strana (Shi / Plnost)"
+                    fill
+                    className="object-contain"
+                  />
+                </div>
+                <div>
+                  <h3 className="text-headline-md font-headline text-[#286b33] text-xl">
+                    Zelený okraj – Shi (Plnost)
+                  </h3>
+                  <p className="text-xs text-on-surface-variant font-semibold">
+                    Režim odebírání a rozptylování přebytku
+                  </p>
+                </div>
+              </div>
+
+              <p className="text-body-md font-body text-on-surface leading-relaxed">
+                Používá se při <strong>akutním napětí, blokádách a přeplnění</strong>. 
+                Zelený okraj pomáhá odebírat přebytečnou nahromaděnou energii, uvolňovat zánětlivé křeče a tišit bolest.
+              </p>
+            </div>
+
+            <div className="pt-4 border-t border-outline-variant/30 text-xs font-body text-on-surface-variant space-y-2">
+              <p className="flex items-center gap-2">
+                <span className="w-2.5 h-2.5 rounded-full bg-[#286b33]" />
+                <strong>Účinek:</strong> Uvolnění, rozptýlení napětí, odvedení přebytku
+              </p>
+              <p className="flex items-center gap-2">
+                <span className="w-2.5 h-2.5 rounded-full bg-[#286b33]" />
+                <strong>Vhodné pro:</strong> Akutní bolesti, křeče, zánětlivé blokády
+              </p>
             </div>
           </div>
 
