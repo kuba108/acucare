@@ -49,7 +49,7 @@ export function QuoteSection({ onSearchChange }: QuoteSectionProps) {
           <div className="text-center mb-16">
             <h2 className="text-headline-md font-headline text-on-surface mb-4">Cesta k přirozené rovnováze</h2>
             <p className="text-body-lg font-body text-on-surface-variant max-w-2xl mx-auto">
-              Objevte sílu akupresury. Jemný tlak na specifické body může podpořit samoléčebné procesy vašeho těla.
+              Objevte sílu aktivace specifických energetických bodů, které podporují samoléčebné procesy vašeho těla.
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-gutter lg:gap-12">
@@ -60,7 +60,7 @@ export function QuoteSection({ onSearchChange }: QuoteSectionProps) {
               </div>
               <h3 className="text-headline-md font-headline text-on-surface text-xl mb-3">Dotyk</h3>
               <p className="text-body-md font-body text-on-surface-variant">
-                Lokalizujte správné akupresurní body na vašem těle s pomocí našich přehledných map a instrukcí.
+                Lokalizujte správné energetické body na vašem těle s pomocí našich přehledných map a instrukcí.
               </p>
             </div>
             {/* Card 2 */}
@@ -68,9 +68,9 @@ export function QuoteSection({ onSearchChange }: QuoteSectionProps) {
               <div className="w-16 h-16 rounded-full bg-surface-container flex items-center justify-center mb-6 text-primary">
                 <Heart className="w-8 h-8" />
               </div>
-              <h3 className="text-headline-md font-headline text-on-surface text-xl mb-3">Léčení</h3>
+              <h3 className="text-headline-md font-headline text-on-surface text-xl mb-3">Aktivní stimulace bodů</h3>
               <p className="text-body-md font-body text-on-surface-variant">
-                Aplikujte jemný, ale pevný tlak pro uvolnění napětí, zmírnění bolesti a podporu krevního oběhu.
+                Aplikujte Halm chip pro zmírnění bolesti.
               </p>
             </div>
             {/* Card 3 */}
@@ -80,7 +80,7 @@ export function QuoteSection({ onSearchChange }: QuoteSectionProps) {
               </div>
               <h3 className="text-headline-md font-headline text-on-surface text-xl mb-3">Rovnováha</h3>
               <p className="text-body-md font-body text-on-surface-variant">
-                Obnovte tok energie a dosáhněte harmonie těla i mysli prostřednictvím pravidelné praxe.
+                Obnovte tok energie a dosáhněte harmonie těla i mysli prostřednictvím pravidelné aktivace stimulačních bodů.
               </p>
             </div>
           </div>

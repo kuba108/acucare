@@ -44,10 +44,10 @@ export default function SeznamBoduPage() {
       <section className="flex flex-col items-center text-center space-y-8 max-w-3xl mx-auto">
         <div className="space-y-4">
           <h1 className="text-headline-xl font-headline text-primary">
-            Katalog Akupresurních Bodů
+            Katalog energetických bodů
           </h1>
           <p className="text-body-lg font-body text-on-surface-variant">
-            Objevte mapu svého těla. Procházejte kompletní přehled akupresurních bodů nebo filtrujte podle zón těla.
+            Objevte mapu svého těla. Procházejte kompletní přehled energetických bodů nebo filtrujte podle zón těla.
           </p>
         </div>
 

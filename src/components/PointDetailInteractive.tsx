@@ -238,9 +238,9 @@ export function PointDetailInteractive({ point, relatedPoints, initialLayers }: 
                 2
               </div>
               <div className="pt-2">
-                <h3 className="text-body-lg font-body text-[#50aab2] font-bold mb-2">Aplikujte chip nebo masírujte rukou</h3>
+                <h3 className="text-body-lg font-body text-[#50aab2] font-bold mb-2">Aplikujte Halm chip</h3>
                 <p className="text-body-md font-body text-on-surface">
-                  {point.stimulationMethod}
+                  Aplikace 30 minut až 3 hodiny
                 </p>
               </div>
             </div>
@@ -253,7 +253,7 @@ export function PointDetailInteractive({ point, relatedPoints, initialLayers }: 
                 <div className="pt-2">
                   <div className="inline-flex items-center gap-2 bg-error-container/30 text-on-tertiary-fixed-variant px-4 py-2 rounded-lg text-sm font-body text-label-md">
                     <ShieldAlert className="w-[18px] h-[18px]" />
-                    <span>{point.cautions}</span>
+                    <span>V těhotenství konzultujte vždy s lékařem</span>
                   </div>
                 </div>
               </div>
