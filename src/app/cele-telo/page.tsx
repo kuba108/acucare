@@ -28,10 +28,10 @@ export default function CeleTeloPage() {
           Celé tělo a meridiány
         </h1>
         <p className="text-body-lg font-body text-on-surface-variant leading-relaxed">
-          Tím, že se čchi soustředí do konkrétních drah energetického proudění, nám prokázala skvělou službu. 
+          Tím, že se čchi (Qi) soustředí do konkrétních drah energetického proudění, nám prokázala skvělou službu. 
           Meridiány terapeutům poskytují plán nebo mapu pohybu energie v těle, což nám umožňuje si lépe 
           představit, kde přesně tělo řádně nepracuje, protože došlo k zneprůchodnění těchto kanálů, 
-          a jak a kde můžeme zkusit toto místo rozpohybovat nebo narušit.
+          energetickou aktivací chipem Halm, můžeme zkusit toto místo rozpohybovat nebo narušit.
         </p>
       </div>
 
@@ -140,7 +140,7 @@ export default function CeleTeloPage() {
             <Sparkles className="w-5 h-5 text-primary-fixed" />
           </div>
           <h2 className="text-headline-md font-headline text-primary">
-            Kolik akupresurních bodů existuje?
+            Kolik energetických bodů existuje?
           </h2>
         </div>
 
@@ -151,8 +151,8 @@ export default function CeleTeloPage() {
               300 až 600 známých bodů
             </h3>
             <p className="text-body-md font-body text-on-surface-variant leading-relaxed mb-4">
-              Stejně jako u jiných vyvíjejících se medicínských oborů se i počet akupresurních bodů může změnit. 
-              V současné době existuje mezi <strong>300 a 600 známými akupresurními body</strong>, v závislosti na tom, 
+              Stejně jako u jiných vyvíjejících se medicínských oborů se i počet energetických bodů může změnit. 
+              V současné době existuje mezi <strong>300 a 600 známými energetickými body</strong>, v závislosti na tom, 
               ze kterého zdroje čerpáte informace.
             </p>
             <p className="text-body-md font-body text-on-surface-variant leading-relaxed">
@@ -170,11 +170,11 @@ export default function CeleTeloPage() {
               </h3>
               <p className="text-body-md font-body text-on-surface-variant leading-relaxed mb-4">
                 Vybrané body patří mezi <strong>nejúčinnější a nejbezpečnější</strong> pro domácí 
-                akupresuru. Jsou snadno dostupné, dobře popsané a pokrývají nejčastější zdravotní 
+                energetickou aktivaci. Jsou snadno dostupné, dobře popsané a pokrývají nejčastější zdravotní 
                 obtíže — od bolesti hlavy a zad přes zažívací potíže až po nespavost a stres.
               </p>
               <p className="text-sm font-body text-on-surface-variant leading-relaxed">
-                Každý bod je v katalogu doplněn o přesnou lokalizaci, popis stimulační techniky, 
+                Každý bod je v katalogu doplněn o přesnou lokalizaci, popis aplikačních míst, 
                 seznam symptomů, při kterých pomáhá, a bezpečnostní upozornění.
               </p>
             </div>
@@ -189,7 +189,7 @@ export default function CeleTeloPage() {
                 href="/o-akupresure"
                 className="inline-flex items-center gap-2 text-secondary font-bold text-sm hover:underline"
               >
-                Více o akupresuře <ArrowRight className="w-4 h-4" />
+                Více o energetické stimulaci <ArrowRight className="w-4 h-4" />
               </Link>
             </div>
           </div>

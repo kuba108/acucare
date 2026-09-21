@@ -33,9 +33,8 @@ export default function AboutAcupressurePage() {
           Více o akupresuře a bodech
         </h1>
         <p className="text-body-lg font-body text-on-surface-variant leading-relaxed">
-          Akupresura je tisíce let stará léčebná metoda vycházející z tradiční čínské medicíny (TCM). 
-          Jemným, avšak pevným tlakem prstů na specifické body pomáhá obnovit přirozený tok životní energie, 
-          uvolnit svalové napětí a nastartovat samoléčebné procesy těla.
+          Tradiční čínská medicína (TCM) a její léčebné metody jsou tisíce let staré.<br/>
+          Jemnou energetickou aktivací specifických bodů pomáháme obnovit přirozený tok životní energie - uvolnit svalové napětí a aktivovat samoléčení vašeho těla.
         </p>
       </div>
 
@@ -46,6 +45,15 @@ export default function AboutAcupressurePage() {
         </blockquote>
         <cite className="text-label-md font-body text-secondary uppercase tracking-widest font-semibold not-italic">
           — Tradiční čínské rčení
+        </cite>
+      </div>
+
+      <div className="bg-surface-container-low rounded-[28px] p-8 md:p-10 mb-16 border border-outline-variant/30 text-center max-w-3xl mx-auto soft-shadow">
+        <blockquote className="text-lg md:text-xl font-headline text-primary italic leading-relaxed mb-3">
+          „Žijeme na základě nedokonalosti“
+        </blockquote>
+        <cite className="text-label-md font-body text-secondary uppercase tracking-widest font-semibold not-italic">
+          — Ing. Eugeniusz Motyka
         </cite>
       </div>
 
