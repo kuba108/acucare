@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react';
 import Link from 'next/link';
-import { Send, CheckCircle2, AlertCircle, ShieldCheck, Mail, Phone, User, FileText, Sparkles } from 'lucide-react';
+import { Send, CheckCircle2, AlertCircle, ShieldCheck, Mail, Phone, User, FileText, HeartPulse } from 'lucide-react';
 
 export default function ObjednavkaPage() {
   const [formData, setFormData] = useState({
@@ -204,7 +204,7 @@ export default function ObjednavkaPage() {
                     rows={4}
                     value={formData.poznamka}
                     onChange={handleChange}
-                    placeholder="Mám zájem o bližší informace k akupresurnímu přístroji..."
+                    placeholder="Mám zájem o bližší informace k energetickému HALM® chipu."
                     className="w-full bg-surface-container-low/60 border border-outline-variant rounded-2xl py-3.5 pl-12 pr-4 text-on-surface focus:outline-none focus:border-[#50aab2] focus:ring-1 focus:ring-[#50aab2] transition-colors"
                   />
                 </div>
@@ -269,7 +269,7 @@ export default function ObjednavkaPage() {
         <div className="lg:col-span-4 space-y-6">
           <div className="bg-surface-container-lowest rounded-[28px] p-8 soft-shadow border border-outline-variant/30 space-y-4">
             <div className="w-12 h-12 rounded-2xl bg-surface-container-low flex items-center justify-center text-[#50aab2]">
-              <Sparkles className="w-6 h-6" />
+              <HeartPulse className="w-6 h-6" />
             </div>
             <h3 className="text-headline-md font-headline text-[#50aab2] text-xl">
               Proč zkusit AcuCare?

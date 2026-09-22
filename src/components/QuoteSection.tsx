@@ -32,7 +32,7 @@ export function QuoteSection({ onSearchChange }: QuoteSectionProps) {
               objev
             </p>
             <p className="font-headline text-2xl sm:text-3xl md:text-4xl text-[#50aab2] tracking-tight font-bold leading-tight">
-              <em>Rezonanční vlna</em> je energií života<sup className="text-xs sm:text-sm font-bold ml-1 align-super">®</sup>
+              <em>Rezonanční vlna je energií života</em><sup className="text-xs sm:text-sm font-bold ml-1 align-super">®</sup>
             </p>
           </div>
 

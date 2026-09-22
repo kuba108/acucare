@@ -49,9 +49,30 @@ export default function AboutAcupressurePage() {
       </div>
 
       <div className="bg-surface-container-low rounded-[28px] p-8 md:p-10 mb-16 border border-outline-variant/30 text-center max-w-3xl mx-auto soft-shadow">
-        <blockquote className="text-lg md:text-xl font-headline text-primary italic leading-relaxed mb-3">
-          „Žijeme na základě nedokonalosti η (ETA)“
+        <span className="text-secondary font-body text-label-md uppercase tracking-widest mb-6 font-semibold">
+          Motto:
+        </span>
+        
+        <blockquote className="text-lg sm:text-xl md:text-2xl font-headline text-primary font-bold leading-relaxed">
+          „Žijeme na základě fyzikálních nedokonalostí{' '}
+          <span className="inline-block text-[1.5em] font-bold text-[#50aab2] align-baseline">η</span>{' '}
+          <span className="text-[0.7em] text-[#50aab2] font-medium uppercase tracking-wider">(ETA)</span>“
         </blockquote>
+
+        <div className="w-16 h-0.5 bg-[#50aab2]/30 mx-auto my-2" />
+
+        <blockquote className="text-lg md:text-xl font-headline text-primary italic leading-relaxed mb-3">
+          „Bez rezonance by nedošlo ke vzniku a záměně jakékoliv energie.“
+        </blockquote>
+
+        <blockquote className="text-base sm:text-lg md:text-xl font-headline text-primary/90 leading-relaxed mb-3">
+          „Trombocyty vytvářejí tepelnou energii v našem organismu.“
+        </blockquote>
+
+        <blockquote className="text-base sm:text-lg md:text-xl font-headline text-primary/90 italic leading-relaxed mb-3">
+          „Fyzika je matematikou života.“
+        </blockquote>
+
         <cite className="text-label-md font-body text-secondary uppercase tracking-widest font-semibold not-italic">
           — Ing. Eugeniusz Motyka
         </cite>
