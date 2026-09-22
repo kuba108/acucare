@@ -431,7 +431,7 @@ export default function AboutAcupressurePage() {
               </h3>
               <div className="bg-error-container/20 rounded-2xl p-5 mb-4">
                 <p className="text-sm font-body text-on-tertiary-fixed-variant leading-relaxed">
-                  <strong>Těhotenství:</strong> V těhotenství se <u>nesmí</u> stimulovat silné stahující body (např. <strong>LI 4</strong>, <strong>SP 6</strong>, <strong>LV 3</strong>, <strong>UB 60</strong>), které mohou vyvolat děložní stahy.
+                  <strong>Těhotenství:</strong> V těhotenství <u>není vhodné</u> stimulovat silné stahující body (např. <strong>LI 4</strong>, <strong>SP 6</strong>, <strong>LV 3</strong>, <strong>UB 60</strong>), které mohou vyvolat děložní stahy.
                 </p>
               </div>
               <ul className="list-disc list-inside text-sm font-body text-on-surface-variant space-y-1.5 ml-2">
