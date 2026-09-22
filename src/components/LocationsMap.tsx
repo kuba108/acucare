@@ -23,7 +23,7 @@ export function LocationsMap() {
             Měřící ordinace & Prodejní místa
           </h2>
           <p className="text-body-lg font-body text-on-surface-variant leading-relaxed">
-            Vyzkoušejte akupresurní chipy Halm osobně. Navštivte naši autorizovanou měřící ordinaci 
+            Vyzkoušejte akupresurní chipy HALM® osobně. Navštivte naši autorizovanou měřící ordinaci 
             nebo prodejní místo v ČR pro profesionální měření energetické rovnováhy (homeostáze).
           </p>
         </div>

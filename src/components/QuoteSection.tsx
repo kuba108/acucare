@@ -32,7 +32,7 @@ export function QuoteSection({ onSearchChange }: QuoteSectionProps) {
               objev
             </p>
             <p className="font-headline text-2xl sm:text-3xl md:text-4xl text-[#50aab2] tracking-tight font-bold leading-tight">
-              Rezonanční vlna je energií života<sup className="text-xs sm:text-sm font-bold ml-1 align-super">®</sup>
+              <em>Rezonanční vlna</em> je energií života<sup className="text-xs sm:text-sm font-bold ml-1 align-super">®</sup>
             </p>
           </div>
 
@@ -70,7 +70,7 @@ export function QuoteSection({ onSearchChange }: QuoteSectionProps) {
               </div>
               <h3 className="text-headline-md font-headline text-on-surface text-xl mb-3">Aktivní stimulace bodů</h3>
               <p className="text-body-md font-body text-on-surface-variant">
-                Aplikujte Halm chip pro zmírnění bolesti.
+                Aplikujte HALM® chip pro zmírnění bolesti.
               </p>
             </div>
             {/* Card 3 */}

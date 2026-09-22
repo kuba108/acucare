@@ -51,19 +51,19 @@ export function PointDetailInteractive({ point, relatedPoints, initialLayers }: 
   const CHIP_VARIANTS: Array<{ id: ChipVariantType; label: string; sublabel: string; color: string }> = [
     {
       id: 'single',
-      label: 'Halm chip jednostranný',
+      label: 'Halm® chip jednostranný',
       sublabel: 'Standardní verze',
       color: '#d4af37',
     },
     {
       id: 'duo_qi',
-      label: 'Halm Duo oboustranný chip (Čchi)',
+      label: 'Halm® Duo oboustranný chip (Čchi)',
       sublabel: 'Režim doplňování energie',
       color: '#d4af37',
     },
     {
       id: 'duo_shi',
-      label: 'Halm Duo oboustranný chip (Shi)',
+      label: 'Halm® Duo oboustranný chip (Shi)',
       sublabel: 'Režim odebírání přebytku',
       color: '#286b33',
     },
@@ -238,7 +238,7 @@ export function PointDetailInteractive({ point, relatedPoints, initialLayers }: 
                 2
               </div>
               <div className="pt-2">
-                <h3 className="text-body-lg font-body text-[#50aab2] font-bold mb-2">Aplikujte Halm chip</h3>
+                <h3 className="text-body-lg font-body text-[#50aab2] font-bold mb-2">Aplikujte HALM® chip</h3>
                 <p className="text-body-md font-body text-on-surface">
                   Aplikace 30 minut až 3 hodiny
                 </p>

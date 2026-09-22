@@ -50,7 +50,7 @@ export default function AboutAcupressurePage() {
 
       <div className="bg-surface-container-low rounded-[28px] p-8 md:p-10 mb-16 border border-outline-variant/30 text-center max-w-3xl mx-auto soft-shadow">
         <blockquote className="text-lg md:text-xl font-headline text-primary italic leading-relaxed mb-3">
-          „Žijeme na základě nedokonalosti“
+          „Žijeme na základě nedokonalosti η (ETA)“
         </blockquote>
         <cite className="text-label-md font-body text-secondary uppercase tracking-widest font-semibold not-italic">
           — Ing. Eugeniusz Motyka
@@ -392,7 +392,7 @@ export default function AboutAcupressurePage() {
               </li>
               <li className="flex items-start gap-3">
                 <span className="w-6 h-6 rounded-full bg-secondary-container text-on-secondary-container flex items-center justify-center font-bold text-xs shrink-0 mt-0.5">3</span>
-                <span><strong>Umístění Haml chipů:</strong> Nalepte Halm chip dle obrázku (všechny body) na energetický bod vašeho těla.</span>
+                <span><strong>Umístění HALM® chipů:</strong> Nalepte HALM® chip dle obrázku (všechny body) na energetický bod vašeho těla.</span>
               </li>
               <li className="flex items-start gap-3">
                 <span className="w-6 h-6 rounded-full bg-secondary-container text-on-secondary-container flex items-center justify-center font-bold text-xs shrink-0 mt-0.5">4</span>

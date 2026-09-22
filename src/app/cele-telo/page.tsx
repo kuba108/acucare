@@ -31,7 +31,7 @@ export default function CeleTeloPage() {
           Tím, že se čchi (Qi) soustředí do konkrétních drah energetického proudění, nám prokázala skvělou službu. 
           Meridiány terapeutům poskytují plán nebo mapu pohybu energie v těle, což nám umožňuje si lépe 
           představit, kde přesně tělo řádně nepracuje, protože došlo k zneprůchodnění těchto kanálů, 
-          energetickou aktivací chipem Halm, můžeme zkusit toto místo rozpohybovat nebo narušit.
+          energetickou aktivací chipem HALM®, můžeme zkusit toto místo rozpohybovat nebo narušit.
         </p>
       </div>
 

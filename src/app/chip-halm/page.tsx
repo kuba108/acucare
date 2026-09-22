@@ -46,7 +46,7 @@ export default function ChipHalmPage() {
             <div className="relative w-64 h-64 md:w-72 md:h-72 drop-shadow-xl hover:scale-105 transition-transform duration-300">
               <Image
                 src="/halm_patent_logo_transparent.png"
-                alt="HALM Patent No. 24128 Emblem"
+                alt="HALM® Patent No. 24128 Emblem"
                 fill
                 className="object-contain"
                 priority
@@ -115,7 +115,7 @@ export default function ChipHalmPage() {
                 <div className="absolute inset-0 w-full h-full rounded-full drop-shadow-xl flex items-center justify-center backface-hidden">
                   <Image
                     src="/halm_chip_gold_clean.png"
-                    alt="HALM Chip Duo - Zlatá strana (Čchi)"
+                    alt="HALM® Chip Duo - Zlatá strana (Čchi)"
                     fill
                     className="object-contain"
                   />
@@ -125,7 +125,7 @@ export default function ChipHalmPage() {
                 <div className="absolute inset-0 w-full h-full rounded-full drop-shadow-xl flex items-center justify-center backface-hidden rotate-y-180">
                   <Image
                     src="/halm_chip_green_clean.png"
-                    alt="HALM Chip Duo - Zelená strana (Shi)"
+                    alt="HALM® Chip Duo - Zelená strana (Shi)"
                     fill
                     className="object-contain"
                   />
@@ -218,7 +218,7 @@ export default function ChipHalmPage() {
                 <div className="relative w-20 h-20 shrink-0 drop-shadow-md">
                   <Image
                     src="/halm_chip_gold_clean.png"
-                    alt="HALM Chip - Zlatá strana (Čchi / Qi Xu)"
+                    alt="HALM® Chip - Zlatá strana (Čchi / Qi Xu)"
                     fill
                     className="object-contain"
                   />
@@ -268,7 +268,7 @@ export default function ChipHalmPage() {
                 <div className="relative w-20 h-20 shrink-0 drop-shadow-md">
                   <Image
                     src="/halm_chip_green_clean.png"
-                    alt="HALM Chip - Zelená strana (Shi / Plnost)"
+                    alt="HALM® Chip - Zelená strana (Shi / Plnost)"
                     fill
                     className="object-contain"
                   />

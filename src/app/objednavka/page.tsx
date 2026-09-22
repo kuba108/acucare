@@ -80,10 +80,10 @@ export default function ObjednavkaPage() {
           Nezávazná poptávka & Objednávka
         </span>
         <h1 className="text-headline-lg-mobile md:text-headline-xl font-headline text-[#50aab2] mb-6">
-          Mám zájem o Halm chip
+          Mám zájem o HALM® chip
         </h1>
         <p className="text-body-lg font-body text-on-surface-variant leading-relaxed max-w-xl mx-auto">
-          Vyplňte kontaktní formulář níže a náš tým se vám ozve zpět s nabídkou Haml chipů.
+          Vyplňte kontaktní formulář níže a náš tým se vám ozve zpět s nabídkou HALM® chipů.
         </p>
       </div>
 

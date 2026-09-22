@@ -26,19 +26,19 @@ export interface PointLayersInfo {
 
 export const CHIP_IMAGES: Record<ChipVariantType, { label: string; sublabel: string; src: string; color: string }> = {
   single: {
-    label: 'Halm chip jednostranný',
+    label: 'Halm® chip jednostranný',
     sublabel: 'Standardní verze',
     src: '/chips/halm_single.png',
     color: '#d4af37',
   },
   duo_qi: {
-    label: 'Halm Duo oboustranný chip (Čchi)',
+    label: 'Halm® Duo oboustranný chip (Čchi)',
     sublabel: 'Režim doplňování energie',
     src: '/chips/halm_duo_qi.png',
     color: '#d4af37',
   },
   duo_shi: {
-    label: 'Halm Duo oboustranný chip (Shi)',
+    label: 'Halm® Duo oboustranný chip (Shi)',
     sublabel: 'Režim odebírání přebytku',
     src: '/chips/halm_duo_shi.png',
     color: '#286b33',
