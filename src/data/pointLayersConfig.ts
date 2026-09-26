@@ -71,26 +71,32 @@ export const POINT_CHIP_COORDINATES: Record<string, PointChipCoordinate | PointC
 
   // === DRÁHA ŽALUDKU (ST) ===
   'st-2': [ // Párový bod pod oběma očima (2 chipy)
-    { x: 44, y: 48, size: 12, label: 'Levý ST 2' },
-    { x: 56, y: 48, size: 12, label: 'Pravý ST 2' },
+    { x: 38.5, y: 53.5, size: 11.5, label: 'Levý ST 2' },
+    { x: 61.5, y: 53.5, size: 11.5, label: 'Pravý ST 2' },
   ],
   'st-3': [ // Párový bod pod lícními kostmi (2 chipy)
-    { x: 43, y: 53, size: 12, label: 'Levý ST 3' },
-    { x: 57, y: 53, size: 12, label: 'Pravý ST 3' },
+    { x: 34.0, y: 54.0, size: 11, label: 'Levý ST 3' },
+    { x: 66.0, y: 54.0, size: 11, label: 'Pravý ST 3' },
   ],
-  'st-6': { x: 50, y: 50, size: 14, label: 'ST 6 (Čelist)' }, // Střední pohled na tvář
-  'st-7': { x: 48, y: 48, size: 14, label: 'ST 7 (Pod lícní kostí)' }, // Střední pohled
+  'st-6': { x: 44.5, y: 67.5, size: 14, label: 'ST 6 (Čelistní kost)' }, // Úhel čelisti / žvýkací sval
+  'st-7': { x: 48.5, y: 61.5, size: 14, label: 'ST 7 (Pod kloubem)' }, // Před uchem pod lícním obloukem
   'st-25': [ // Párový bod po obou stranách pupku (2 chipy)
-    { x: 38, y: 50, size: 13, label: 'Levý ST 25' },
-    { x: 62, y: 50, size: 13, label: 'Pravý ST 25' },
+    { x: 43.5, y: 49.0, size: 11.5, label: 'Levý ST 25' },
+    { x: 56.5, y: 49.0, size: 11.5, label: 'Pravý ST 25' },
   ],
-  'st-36': { x: 50, y: 45, size: 15, label: 'ST 36 (Pod kolenem)' }, // Střední pohled nohy
-  'st-37': { x: 50, y: 52, size: 14, label: 'ST 37 (Lýtko)' }, // Střední pohled nohy
+  'st-36': [ // Párový bod pod oběma koleny (2 chipy)
+    { x: 31.5, y: 51.0, size: 11, label: 'Levý ST 36' },
+    { x: 69.0, y: 51.0, size: 11, label: 'Pravý ST 36' },
+  ],
+  'st-37': [ // Párový bod na obou holeních (2 chipy)
+    { x: 30.5, y: 65.5, size: 11, label: 'Levý ST 37' },
+    { x: 70.0, y: 65.5, size: 11, label: 'Pravý ST 37' },
+  ],
 
   // === DRÁHA SLEZINY (SP) ===
-  'sp-6': { x: 52, y: 50, size: 16, label: 'SP 6 (Vnitřní lýtko nad kotníkem)' }, // Detail dolní nohy
-  'sp-8': { x: 50, y: 50, size: 15, label: 'SP 8 (Vnitřní holeň)' }, // Střední pohled
-  'sp-9': { x: 50, y: 48, size: 15, label: 'SP 9 (Pod kolenem zevnitř)' }, // Střední pohled
+  'sp-6': { x: 64.5, y: 65.5, size: 15, label: 'SP 6 (Spojení tří jin)' }, // Vnitřní lýtko nad kotníkem
+  'sp-8': { x: 44.5, y: 47.5, size: 14, label: 'SP 8 (Čep země)' }, // Vnitřní hrana holenní kosti
+  'sp-9': { x: 51.5, y: 58.5, size: 14, label: 'SP 9 (Pramen na jinové straně vršku)' }, // Vnitřní ohyb pod kolenem
 
   // === DRÁHA SRDCE (HT) ===
   'ht-7': { x: 45, y: 52, size: 19, label: 'HT 7 (Zápěstní rýha malíku)' }, // Velký detail zápěstí
@@ -102,39 +108,42 @@ export const POINT_CHIP_COORDINATES: Record<string, PointChipCoordinate | PointC
 
   // === DRÁHA MOČOVÉHO MĚCHÝŘE (UB) ===
   'ub-2': [ // Párový bod na vnitřním začátku obočí (2 chipy)
-    { x: 46, y: 44, size: 11, label: 'Levý UB 2' },
-    { x: 54, y: 44, size: 11, label: 'Pravý UB 2' },
+    { x: 38.5, y: 57.0, size: 11, label: 'Levý UB 2' },
+    { x: 61.5, y: 57.0, size: 11, label: 'Pravý UB 2' },
   ],
   'ub-12': [ // Párový bod horních zad T2 (2 chipy)
-    { x: 43, y: 46, size: 12, label: 'Levý UB 12' },
-    { x: 57, y: 46, size: 12, label: 'Pravý UB 12' },
+    { x: 45.5, y: 55.5, size: 11, label: 'Levý UB 12' },
+    { x: 54.5, y: 55.5, size: 11, label: 'Pravý UB 12' },
   ],
   'ub-13': [ // Párový bod Shu Plic T3 (2 chipy)
-    { x: 43, y: 48, size: 12, label: 'Levý UB 13' },
-    { x: 57, y: 48, size: 12, label: 'Pravý UB 13' },
+    { x: 45.5, y: 57.5, size: 11, label: 'Levý UB 13' },
+    { x: 54.5, y: 57.5, size: 11, label: 'Pravý UB 13' },
   ],
   'ub-15': [ // Párový bod Shu Srdce T5 (2 chipy)
-    { x: 43, y: 50, size: 12, label: 'Levý UB 15' },
-    { x: 57, y: 50, size: 12, label: 'Pravý UB 15' },
+    { x: 44.5, y: 58.5, size: 11, label: 'Levý UB 15' },
+    { x: 55.5, y: 58.5, size: 11, label: 'Pravý UB 15' },
   ],
   'ub-20': [ // Párový bod Shu Sleziny T11 (2 chipy)
-    { x: 43, y: 51, size: 12, label: 'Levý UB 20' },
-    { x: 57, y: 51, size: 12, label: 'Pravý UB 20' },
+    { x: 39.5, y: 59.5, size: 11, label: 'Levý UB 20' },
+    { x: 60.5, y: 59.5, size: 11, label: 'Pravý UB 20' },
   ],
   'ub-22': [ // Párový bod Shu Tří Zářičů L1 (2 chipy)
-    { x: 43, y: 52, size: 12, label: 'Levý UB 22' },
-    { x: 57, y: 52, size: 12, label: 'Pravý UB 22' },
+    { x: 42.5, y: 63.5, size: 11, label: 'Levý UB 22' },
+    { x: 57.5, y: 63.5, size: 11, label: 'Pravý UB 22' },
   ],
   'ub-25': [ // Párový bod Shu Tlustého Střeva L4 (2 chipy)
-    { x: 43, y: 53, size: 13, label: 'Levý UB 25' },
-    { x: 57, y: 53, size: 13, label: 'Pravý UB 25' },
+    { x: 44.0, y: 58.5, size: 11, label: 'Levý UB 25' },
+    { x: 56.0, y: 58.5, size: 11, label: 'Pravý UB 25' },
   ],
   'ub-32': [ // Párový bod křížové kosti (2 chipy)
-    { x: 44, y: 54, size: 12, label: 'Levý UB 32' },
-    { x: 56, y: 54, size: 12, label: 'Pravý UB 32' },
+    { x: 43.0, y: 56.5, size: 11, label: 'Levý UB 32' },
+    { x: 57.0, y: 56.5, size: 11, label: 'Pravý UB 32' },
   ],
-  'ub-40': { x: 50, y: 50, size: 15, label: 'UB 40 (Podkolenní jamka)' }, // Střední pohled
-  'ub-60': { x: 48, y: 52, size: 18, label: 'UB 60 (Vnější kotník)' }, // Detail kotníku
+  'ub-40': [ // Párový bod podkolenní jamky (2 chipy)
+    { x: 36.5, y: 63.5, size: 11, label: 'Levý UB 40' },
+    { x: 63.5, y: 63.5, size: 11, label: 'Pravý UB 40' },
+  ],
+  'ub-60': { x: 39.0, y: 66.5, size: 13, label: 'UB 60 (Hory Kunlun)' }, // Vnější kotník
 
   // === DRÁHA LEDVIN (KD) ===
   'kd-3': { x: 48, y: 52, size: 18, label: 'KD 3 (Vnitřní kotník)' }, // Detail kotníku
@@ -146,11 +155,11 @@ export const POINT_CHIP_COORDINATES: Record<string, PointChipCoordinate | PointC
   'sj-3': { x: 50, y: 50, size: 19, label: 'SJ 3 (Hřbet ruky u kloubů)' }, // Detail hřbetu ruky
   'sj-5': { x: 50, y: 50, size: 17, label: 'SJ 5 (Hřbetní strana zápěstí)' }, // Detail zápěstí
   'sj-6': { x: 50, y: 50, size: 16, label: 'SJ 6 (Předloktí nad zápěstím)' }, // Střední pohled
-  'sj-17': { x: 48, y: 50, size: 15, label: 'SJ 17 (Za ušním lalůčkem)' }, // Detail za uchem
+  'sj-17': { x: 53.5, y: 58.5, size: 14, label: 'SJ 17 (Štít proti větru)' }, // Za ušním lalůčkem
 
   // === DRÁHA ŽLUČNÍKU (GB) ===
-  'gb-2': { x: 50, y: 71, size: 8, label: 'GB 2 (Před uchem)' }, // Detail ucha
-  'gb-12': { x: 50, y: 50, size: 14, label: 'GB 12 (Za uchem na kosti)' }, // Detail za uchem
+  'gb-2': { x: 50.5, y: 72.0, size: 14, label: 'GB 2 (Sluchové setkání)' }, // Před uchem
+  'gb-12': { x: 51.5, y: 56.5, size: 14, label: 'GB 12 (Mastoidní výběžek)' }, // Za uchem
   'gb-14': [ // Párový bod nad oběma obočími (2 chipy)
     { x: 44, y: 42, size: 12, label: 'Levý GB 14' },
     { x: 56, y: 42, size: 12, label: 'Pravý GB 14' },
@@ -159,20 +168,20 @@ export const POINT_CHIP_COORDINATES: Record<string, PointChipCoordinate | PointC
     { x: 38, y: 48, size: 14, label: 'Levý GB 20' },
     { x: 62, y: 48, size: 14, label: 'Pravý GB 20' },
   ],
-  'gb-30': { x: 52, y: 52, size: 10, label: 'GB 30 (Hýždě / kyčel)' }, // Celkový pohled na bok
+  'gb-30': { x: 52.0, y: 51.5, size: 12, label: 'GB 30 (Skákající kroužek)' }, // Bok / hýždě
 
   // === DRÁHA JATER (LV) ===
   'lv-3': { x: 50, y: 50, size: 18, label: 'LV 3 (Hřbet nohy mezi prsty)' }, // Velký detail nártu
   'lv-13': { x: 48, y: 50, size: 13, label: 'LV 13 (Konec 11. žebra na boku)' }, // Celkový pohled trupu
 
   // === PŘEDNÍ STŘEDNÍ DRÁHA (CV / REN MAI) ===
-  'cv-4': { x: 50, y: 52, size: 14, label: 'CV 4 (Podbřišek)' }, // Širší záběr břicha
-  'cv-6': { x: 50, y: 48, size: 14, label: 'CV 6 (Moře čchi pod pupkem)' }, // Širší záběr břicha
-  'cv-12': { x: 50, y: 60, size: 10, label: 'CV 12 (Střed břicha nad pupkem)' }, // Širší záběr břicha
-  'cv-17': { x: 50, y: 58, size: 10, label: 'CV 17 (Střed hrudní kosti)' }, // Širší záběr hrudníku
+  'cv-4': { x: 49.0, y: 50.0, size: 12, label: 'CV 4 (Brána původu)' }, // Podbřišek
+  'cv-6': { x: 50.0, y: 46.0, size: 12, label: 'CV 6 (Moře čchi)' }, // Pod pupkem
+  'cv-12': { x: 51.0, y: 60.5, size: 12, label: 'CV 12 (Střední dutina)' }, // Nad pupkem
+  'cv-17': { x: 50.0, y: 59.0, size: 12, label: 'CV 17 (Střed hrudi)' }, // Hrudní kost
 
   // === ZADNÍ STŘEDNÍ DRÁHA (GV / DU MAI) ===
-  'gv-26': { x: 50, y: 53, size: 10, label: 'GV 26 (Rýha pod nosem)' }, // Střední detail obličeje
+  'gv-26': { x: 50.5, y: 52.0, size: 13, label: 'GV 26 (Vodní žlábek)' }, // Rýha pod nosem
 };
 
 /**
