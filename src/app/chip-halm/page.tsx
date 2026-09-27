@@ -114,7 +114,7 @@ export default function ChipHalmPage() {
                 {/* Front Side: Gold Chip (Qi Xu) */}
                 <div className="absolute inset-0 w-full h-full rounded-full drop-shadow-xl flex items-center justify-center backface-hidden">
                   <Image
-                    src="/halm_chip_gold_clean.png"
+                    src="/chips/halm_duo_qi.png"
                     alt="HALM® Chip Duo - Zlatá strana (Čchi)"
                     fill
                     className="object-contain"
@@ -124,7 +124,7 @@ export default function ChipHalmPage() {
                 {/* Back Side: Green Chip (Shi) */}
                 <div className="absolute inset-0 w-full h-full rounded-full drop-shadow-xl flex items-center justify-center backface-hidden rotate-y-180">
                   <Image
-                    src="/halm_chip_green_clean.png"
+                    src="/chips/halm_duo_shi.png"
                     alt="HALM® Chip Duo - Zelená strana (Shi)"
                     fill
                     className="object-contain"
@@ -217,7 +217,7 @@ export default function ChipHalmPage() {
               <div className="flex items-center gap-4 py-4">
                 <div className="relative w-20 h-20 shrink-0 drop-shadow-md">
                   <Image
-                    src="/halm_chip_gold_clean.png"
+                    src="/chips/halm_duo_qi.png"
                     alt="HALM® Chip - Zlatá strana (Čchi / Qi Xu)"
                     fill
                     className="object-contain"
@@ -267,7 +267,7 @@ export default function ChipHalmPage() {
               <div className="flex items-center gap-4 py-4">
                 <div className="relative w-20 h-20 shrink-0 drop-shadow-md">
                   <Image
-                    src="/halm_chip_green_clean.png"
+                    src="/chips/halm_duo_shi.png"
                     alt="HALM® Chip - Zelená strana (Shi / Plnost)"
                     fill
                     className="object-contain"
