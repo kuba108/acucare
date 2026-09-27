@@ -5,6 +5,7 @@ import Link from 'next/link';
 import { Search, X, ChevronRight, Activity } from 'lucide-react';
 import { ACUPRESSURE_POINTS, AcupressurePoint } from '@/data/pointsData';
 import { SYMPTOM_OPTIONS, SymptomOption } from '@/data/symptomsData';
+import { matchesPointSearch, matchesSymptomSearch } from '@/lib/searchUtils';
 
 interface SearchBarProps {
   onSearchChange?: (query: string, results: AcupressurePoint[]) => void;
@@ -27,28 +28,14 @@ export function SearchBar({ onSearchChange, onNavigate, autoFocus }: SearchBarPr
 
   // Filter matching symptoms (Mode: symptom)
   const matchedSymptoms = useMemo(() => {
-    const trimmed = query.trim().toLowerCase();
-    if (!trimmed || searchMode !== 'symptom') return [];
-
-    return SYMPTOM_OPTIONS.filter((s) => {
-      const matchLabel = s.label.toLowerCase().includes(trimmed);
-      const matchKeywords = s.keywords.some((kw) => kw.includes(trimmed));
-      return matchLabel || matchKeywords;
-    });
+    if (!query.trim() || searchMode !== 'symptom') return [];
+    return SYMPTOM_OPTIONS.filter((s) => matchesSymptomSearch(s, query));
   }, [query, searchMode]);
 
   // Filter matching points directly (Mode: point)
   const matchedPoints = useMemo(() => {
-    const trimmed = query.trim().toLowerCase();
-    if (!trimmed || searchMode !== 'point') return [];
-
-    return ACUPRESSURE_POINTS.filter((p) => {
-      return (
-        p.name.toLowerCase().includes(trimmed) ||
-        p.code.toLowerCase().includes(trimmed) ||
-        p.pinyinName.toLowerCase().includes(trimmed)
-      );
-    });
+    if (!query.trim() || searchMode !== 'point') return [];
+    return ACUPRESSURE_POINTS.filter((p) => matchesPointSearch(p, query));
   }, [query, searchMode]);
 
   // Sync results for catalog filter if needed

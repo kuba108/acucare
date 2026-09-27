@@ -41,12 +41,12 @@ export default function ChipHalmPage() {
       <div className="bg-surface-container-lowest rounded-[28px] p-8 md:p-12 soft-shadow border border-outline-variant/30 mb-16">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
           
-          {/* Main HALM Patent Emblem Image (Without white box border) */}
+          {/* Main HALM Chip Image */}
           <div className="lg:col-span-5 flex justify-center">
             <div className="relative w-64 h-64 md:w-72 md:h-72 drop-shadow-xl hover:scale-105 transition-transform duration-300">
               <Image
-                src="/halm_patent_logo_transparent.png"
-                alt="HALM® Patent No. 24128 Emblem"
+                src="/chips/halm_single.png"
+                alt="Energetický chip HALM®"
                 fill
                 className="object-contain"
                 priority

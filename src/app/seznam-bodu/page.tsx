@@ -4,6 +4,7 @@ import React, { useState, useMemo } from 'react';
 import { BodyMap, BodyRegionType } from '@/components/BodyMap';
 import { PointCard } from '@/components/PointCard';
 import { ACUPRESSURE_POINTS } from '@/data/pointsData';
+import { matchesPointSearch } from '@/lib/searchUtils';
 import { Search } from 'lucide-react';
 
 export default function SeznamBoduPage() {
@@ -25,14 +26,8 @@ export default function SeznamBoduPage() {
       list = list.filter((p) => p.bodyRegion === selectedRegion);
     }
 
-    const term = localSearch.trim().toLowerCase();
-    if (term) {
-      list = list.filter(
-        (p) =>
-          p.name.toLowerCase().includes(term) ||
-          p.code.toLowerCase().includes(term) ||
-          p.pinyinName.toLowerCase().includes(term)
-      );
+    if (localSearch.trim()) {
+      list = list.filter((p) => matchesPointSearch(p, localSearch));
     }
 
     return list;
