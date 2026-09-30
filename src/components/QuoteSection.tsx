@@ -34,6 +34,9 @@ export function QuoteSection({ onSearchChange }: QuoteSectionProps) {
             <p className="font-headline text-2xl sm:text-3xl md:text-4xl text-[#50aab2] tracking-tight font-bold leading-tight">
               <em>Rezonanční vlna je energií života</em><sup className="text-xs sm:text-sm font-bold ml-1 align-super">®</sup>
             </p>
+            <p className="mt-3 text-sm sm:text-base font-body text-[#50aab2] font-semibold tracking-wide">
+              — Ing. Eugeniusz Motyka
+            </p>
           </div>
 
           {/* Search Input directly in Hero */}

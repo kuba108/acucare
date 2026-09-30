@@ -43,6 +43,10 @@ export default function HomePage() {
             <blockquote className="text-base sm:text-lg md:text-xl font-headline text-primary/90 italic leading-relaxed">
               „Fyzika je matematikou života.“
             </blockquote>
+
+            <cite className="block text-label-md font-body text-secondary uppercase tracking-widest font-semibold not-italic pt-2">
+              — Ing. Eugeniusz Motyka
+            </cite>
           </div>
         </div>
       </section>

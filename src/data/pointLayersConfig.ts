@@ -56,7 +56,7 @@ export const POINT_CHIP_COORDINATES: Record<string, PointChipCoordinate | PointC
   // === DRÁHA PLIC (LU) ===
   'lu-1': { x: 39, y: 56, size: 8, label: 'LU 1 (Střed Palace)' }, // Celkový pohled na hrudník
   'lu-5': { x: 49, y: 54, size: 10, label: 'LU 5 (Loketní ohyb)' }, // Střední pohled lokte
-  'lu-7': { x: 42, y: 48, size: 16, label: 'LU 7 (Předloktí nad zápěstím)' }, // Detail zápěstí
+  'lu-7': { x: 47, y: 52, size: 10, label: 'LU 7 (Předloktí nad zápěstím)' }, // Detail zápěstí
   'lu-9': { x: 56, y: 62, size: 10, label: 'LU 9 (Velká propast - zápěstí)' }, // Velký detail zápěstí
   'lu-11': { x: 38, y: 60, size: 10, label: 'LU 11 (Palec u nehtu)' }, // Velký detail prstu
 
@@ -65,8 +65,8 @@ export const POINT_CHIP_COORDINATES: Record<string, PointChipCoordinate | PointC
   'li-10': { x: 56.0, y: 63.0, size: 10, label: 'LI 10 (Předloktí)' }, // Střední pohled
   'li-11': { x: 42.0, y: 52.0, size: 10, label: 'LI 11 (Vnější loket)' }, // Střední pohled
   'li-20': [ // Párový bod po obou stranách nosních dírek (2 chipy)
-    { x: 42.5, y: 42.5, size: 12, label: 'Levý LI 20' },
-    { x: 57.5, y: 42.5, size: 12, label: 'Pravý LI 20' },
+    { x: 41, y: 54, size: 6, label: 'Levý LI 20' },
+    { x: 58.5, y: 54, size: 6, label: 'Pravý LI 20' },
   ],
 
   // === DRÁHA ŽALUDKU (ST) ===
@@ -114,8 +114,8 @@ export const POINT_CHIP_COORDINATES: Record<string, PointChipCoordinate | PointC
     { x: 61.5, y: 57.0, size: 11, label: 'Pravý UB 2' },
   ],
   'ub-12': [ // Párový bod horních zad T2 (2 chipy)
-    { x: 45.5, y: 55.5, size: 10, label: 'Levý UB 12' },
-    { x: 54.5, y: 55.5, size: 10, label: 'Pravý UB 12' },
+    { x: 43, y: 61, size: 8, label: 'Levý UB 12' },
+    { x: 56, y: 61, size: 8, label: 'Pravý UB 12' },
   ],
   'ub-13': [ // Párový bod Shu Plic T3 (2 chipy)
     { x: 45.5, y: 57.5, size: 10, label: 'Levý UB 13' },
@@ -154,7 +154,7 @@ export const POINT_CHIP_COORDINATES: Record<string, PointChipCoordinate | PointC
   'pc-6': { x: 48.0, y: 55.0, size: 10, label: 'PC 6 (Vnitřní zápěstí)' }, // Velký detail předloktí/zápěstí
 
   // === DRÁHA TROJITÉHO OHŘÍVAČE (SJ) ===
-  'sj-3': { x: 56.0, y: 52.5, size: 12, label: 'SJ 3 (Hřbet ruky u kloubů)' }, // Detail hřbetu ruky
+  'sj-3': { x: 55.0, y: 53, size: 10, label: 'SJ 3 (Hřbet ruky u kloubů)' }, // Detail hřbetu ruky
   'sj-5': { x: 54.0, y: 57.0, size: 10, label: 'SJ 5 (Hřbetní strana zápěstí)' }, // Detail zápěstí
   'sj-6': { x: 51.0, y: 58, size: 10, label: 'SJ 6 (Předloktí nad zápěstím)' }, // Střední pohled
   'sj-17': { x: 55, y: 58.5, size: 8, label: 'SJ 17 (Štít proti větru)' }, // Za ušním lalůčkem
@@ -173,7 +173,7 @@ export const POINT_CHIP_COORDINATES: Record<string, PointChipCoordinate | PointC
   'gb-30': { x: 52.0, y: 51.5, size: 8, label: 'GB 30 (Skákající kroužek)' }, // Bok / hýždě
 
   // === DRÁHA JATER (LV) ===
-  'lv-3': { x: 47.5, y: 52.5, size: 10, label: 'LV 3 (Hřbet nohy mezi prsty)' }, // Velký detail nártu
+  'lv-3': { x: 50, y: 51, size: 8, label: 'LV 3 (Hřbet nohy mezi prsty)' }, // Velký detail nártu
   'lv-13': { x: 51.5, y: 52.5, size: 8, label: 'LV 13 (Konec 11. žebra na boku)' }, // Celkový pohled trupu
 
   // === PŘEDNÍ STŘEDNÍ DRÁHA (CV / REN MAI) ===
