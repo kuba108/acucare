@@ -278,7 +278,7 @@ export default function ChipHalmPage() {
                     Zelený okraj – Shi (Plnost)
                   </h3>
                   <p className="text-xs text-on-surface-variant font-semibold">
-                    Režim odebírání a rozptylování přebytku
+                    Režim odebírání a rozptylování energie
                   </p>
                 </div>
               </div>
