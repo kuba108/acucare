@@ -3,7 +3,7 @@
 import React from 'react';
 import { Brain, Hand, Heart, Bone, Footprints, Smile } from 'lucide-react';
 
-export type BodyRegionType = 'Vše' | 'Hlava a krk' | 'Ruce a paže' | 'Hrudník a břicho' | 'Záda a páteř' | 'Nohy a chodidla' | 'Psychika a emotivno';
+export type BodyRegionType = 'Vše' | 'Hlava a krk' | 'Ruce a paže' | 'Hrudník a břicho' | 'Záda a páteř' | 'Nohy a chodidla';
 
 const REGIONS: { name: BodyRegionType; label: string }[] = [
   { name: 'Vše', label: 'Vše' },
@@ -12,7 +12,6 @@ const REGIONS: { name: BodyRegionType; label: string }[] = [
   { name: 'Nohy a chodidla', label: 'Nohy' },
   { name: 'Záda a páteř', label: 'Záda' },
   { name: 'Hrudník a břicho', label: 'Hrudník' },
-  { name: 'Psychika a emotivno', label: 'Psychika' },
 ];
 
 interface BodyMapProps {

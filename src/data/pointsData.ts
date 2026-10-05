@@ -7,7 +7,7 @@ export interface AcupressurePoint {
   pinyinName: string;
   meridian: string;
   meridianGroup: string;
-  bodyRegion: 'Hlava a krk' | 'Ruce a paže' | 'Hrudník a břicho' | 'Záda a páteř' | 'Nohy a chodidla' | 'Psychika a emotivno';
+  bodyRegion: 'Hlava a krk' | 'Ruce a paže' | 'Hrudník a břicho' | 'Záda a páteř' | 'Nohy a chodidla';
   location: string;
   usage: string;
   notes?: string;

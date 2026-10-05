@@ -1,6 +1,9 @@
 import React from 'react';
+import Link from 'next/link';
 import { notFound } from 'next/navigation';
+import { ChevronRight } from 'lucide-react';
 import { ACUPRESSURE_POINTS } from '@/data/pointsData';
+import { SYMPTOM_OPTIONS } from '@/data/symptomsData';
 import { resolvePointLayersServer } from '@/lib/pointLayersServer';
 import { PointDetailInteractive } from '@/components/PointDetailInteractive';
 
@@ -48,6 +51,25 @@ export default async function PointDetailPage({ params }: PageProps) {
         relatedPoints={relatedPoints}
         initialLayers={initialLayers}
       />
+
+      {/* Další časté potíže a témata */}
+      <section className="mt-12 md:mt-16 bg-surface-container-low rounded-[28px] p-8 md:p-10 border border-outline-variant/30">
+        <h3 className="text-headline-md font-headline text-primary text-xl mb-6">
+          Další časté potíže a témata
+        </h3>
+        <div className="flex flex-wrap gap-2.5">
+          {SYMPTOM_OPTIONS.map((symptom) => (
+            <Link
+              key={symptom.id}
+              href={`/potize/${symptom.id}`}
+              className="inline-flex items-center gap-2 px-4 py-2.5 rounded-full bg-surface-container-lowest hover:bg-primary hover:text-on-primary text-on-surface-variant font-body text-sm font-semibold transition-all border border-outline-variant/30 shadow-xs group cursor-pointer"
+            >
+              <span>{symptom.label}</span>
+              <ChevronRight className="w-3.5 h-3.5 text-primary group-hover:text-on-primary transition-colors" />
+            </Link>
+          ))}
+        </div>
+      </section>
     </main>
   );
 }

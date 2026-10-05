@@ -435,8 +435,8 @@ export default function AboutAcupressurePage() {
                 </p>
               </div>
               <ul className="list-disc list-inside text-sm font-body text-on-surface-variant space-y-1.5 ml-2">
-                <li>Delší dobu stimulace energetického bodu konzultujte s lékařem.</li>
-                <li>V těhotenstí vždy konzultujte s lékařem.</li>
+                <li>Aplikaci delší než 3 hodiny vždy konzultujte s lékařem.</li>
+                <li>V těhotenství vždy konzultujte s lékařem.</li>
               </ul>
             </div>
           </div>

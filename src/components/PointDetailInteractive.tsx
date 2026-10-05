@@ -250,10 +250,14 @@ export function PointDetailInteractive({ point, relatedPoints, initialLayers }: 
                 <div className="w-10 h-10 shrink-0 rounded-full bg-[#50aab2] flex items-center justify-center border-2 border-surface-container-lowest shadow-sm text-white">
                   <ShieldAlert className="w-5 h-5" />
                 </div>
-                <div className="pt-2">
+                <div className="pt-2 flex flex-col gap-2.5">
                   <div className="inline-flex items-center gap-2 bg-error-container/30 text-on-tertiary-fixed-variant px-4 py-2 rounded-lg text-sm font-body text-label-md">
-                    <ShieldAlert className="w-[18px] h-[18px]" />
+                    <ShieldAlert className="w-[18px] h-[18px] shrink-0" />
                     <span>V těhotenství konzultujte vždy s lékařem</span>
+                  </div>
+                  <div className="inline-flex items-center gap-2 bg-error-container/30 text-on-tertiary-fixed-variant px-4 py-2 rounded-lg text-sm font-body text-label-md">
+                    <ShieldAlert className="w-[18px] h-[18px] shrink-0" />
+                    <span>Aplikaci delší než 3 hodiny vždy konzultujte s lékařem</span>
                   </div>
                 </div>
               </div>
