@@ -1,15 +1,38 @@
 'use client';
 
-import React from 'react';
-import { Quote, Fingerprint, Heart, Sparkles } from 'lucide-react';
-import { SearchBar } from './SearchBar';
-import { AcupressurePoint } from '@/data/pointsData';
+import React, { useState, useEffect } from 'react';
+import Link from 'next/link';
+import { Fingerprint, Heart, Sparkles, Activity, ChevronRight, X } from 'lucide-react';
+import { SYMPTOM_OPTIONS } from '@/data/symptomsData';
 
 interface QuoteSectionProps {
-  onSearchChange: (query: string, results: AcupressurePoint[]) => void;
+  onSearchChange?: (query: string, results: any[]) => void;
 }
 
 export function QuoteSection({ onSearchChange }: QuoteSectionProps) {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  // Close modal on Escape key and prevent body scroll when open
+  useEffect(() => {
+    function handleKeyDown(e: KeyboardEvent) {
+      if (e.key === 'Escape') {
+        setIsModalOpen(false);
+      }
+    }
+
+    if (isModalOpen) {
+      document.body.style.overflow = 'hidden';
+      window.addEventListener('keydown', handleKeyDown);
+    } else {
+      document.body.style.overflow = '';
+    }
+
+    return () => {
+      document.body.style.overflow = '';
+      window.removeEventListener('keydown', handleKeyDown);
+    };
+  }, [isModalOpen]);
+
   return (
     <>
       {/* Hero Section with Background Image */}
@@ -39,12 +62,78 @@ export function QuoteSection({ onSearchChange }: QuoteSectionProps) {
             </p>
           </div>
 
-          {/* Search Input directly in Hero */}
-          <div className="w-full">
-            <SearchBar onSearchChange={onSearchChange} />
+          {/* Button: Časté potíže a témata */}
+          <div className="w-full max-w-xl mx-auto">
+            <button
+              type="button"
+              onClick={() => setIsModalOpen(true)}
+              className="w-full bg-surface-container-lowest hover:bg-[#eaf5f6] rounded-full border-2 border-[#50aab2] shadow-[0_4px_24px_rgba(80,170,178,0.12)] hover:shadow-[0_6px_30px_rgba(80,170,178,0.22)] py-4 sm:py-4.5 px-6 sm:px-8 text-base sm:text-lg font-headline font-bold text-[#50aab2] flex items-center justify-between transition-all duration-200 cursor-pointer group hover:scale-[1.01] active:scale-[0.99]"
+            >
+              <div className="flex items-center gap-3">
+                <Activity className="w-6 h-6 text-[#50aab2] group-hover:scale-110 transition-transform" />
+                <span>Časté potíže a témata</span>
+              </div>
+              <div className="w-9 h-9 rounded-full bg-[#50aab2] text-white flex items-center justify-center group-hover:translate-x-1 transition-transform shadow-xs">
+                <ChevronRight className="w-5 h-5 text-white" />
+              </div>
+            </button>
           </div>
         </div>
       </section>
+
+      {/* Modal Dialog for Časté potíže a témata */}
+      {isModalOpen && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6">
+          {/* Backdrop blur overlay */}
+          <div
+            className="fixed inset-0 bg-black/50 backdrop-blur-sm transition-opacity"
+            onClick={() => setIsModalOpen(false)}
+          />
+
+          {/* Modal Content Box */}
+          <div className="relative bg-surface-container-lowest rounded-[28px] p-6 sm:p-8 md:p-10 max-w-4xl w-full max-h-[85vh] overflow-y-auto shadow-2xl border border-outline-variant/30 z-10 space-y-6 animate-in fade-in zoom-in-95 duration-150">
+            {/* Modal Header */}
+            <div className="flex items-center justify-between border-b border-outline-variant/20 pb-5">
+              <div className="flex items-center gap-3.5">
+                <div className="w-12 h-12 rounded-2xl bg-[#d6f2f5] text-[#24656b] flex items-center justify-center shrink-0 shadow-xs">
+                  <Activity className="w-6 h-6 text-[#50aab2]" />
+                </div>
+                <div>
+                  <h3 className="text-xl sm:text-2xl font-headline font-bold text-[#50aab2]">
+                    Časté potíže a témata
+                  </h3>
+                  <p className="text-xs sm:text-sm font-body text-on-surface-variant mt-0.5">
+                    Vyberte zdravotní téma pro zobrazení doporučených akupresurních bodů
+                  </p>
+                </div>
+              </div>
+              <button
+                type="button"
+                onClick={() => setIsModalOpen(false)}
+                className="p-2 rounded-full text-outline hover:bg-surface-container hover:text-on-surface transition-colors cursor-pointer"
+                title="Zavřít"
+              >
+                <X className="w-6 h-6" />
+              </button>
+            </div>
+
+            {/* Symptom options pills matching the reference screenshot */}
+            <div className="flex flex-wrap gap-3 sm:gap-3.5 pt-2">
+              {SYMPTOM_OPTIONS.map((symptom) => (
+                <Link
+                  key={symptom.id}
+                  href={`/potize/${symptom.id}`}
+                  onClick={() => setIsModalOpen(false)}
+                  className="inline-flex items-center gap-2.5 px-5 py-3 rounded-full bg-surface-container hover:bg-[#50aab2] hover:text-white text-on-surface font-body text-sm sm:text-base font-semibold transition-all border border-outline-variant/30 shadow-xs group cursor-pointer hover:shadow-md hover:-translate-y-0.5 active:translate-y-0"
+                >
+                  <span>{symptom.label}</span>
+                  <ChevronRight className="w-4 h-4 text-[#50aab2] group-hover:text-white group-hover:translate-x-0.5 transition-all" />
+                </Link>
+              ))}
+            </div>
+          </div>
+        </div>
+      )}
 
       {/* How it works Section */}
       <section className="w-full py-section-gap px-container-padding bg-surface-bright">

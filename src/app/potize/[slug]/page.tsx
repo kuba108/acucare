@@ -79,11 +79,11 @@ export default async function SymptomDetailPage({ params }: PageProps) {
       {/* Header with Breadcrumb and Icon */}
       <div className="mb-10">
         <Link
-          href="/"
-          className="inline-flex items-center gap-2 text-on-surface-variant hover:text-primary transition-colors text-label-md font-body mb-6"
+          href="/seznam-bodu"
+          className="inline-flex items-center gap-2 text-on-surface-variant hover:text-primary transition-colors text-label-md font-body mb-6 cursor-pointer"
         >
           <ArrowLeft className="w-4 h-4" />
-          <span>Zpět na vyhledávání</span>
+          <span>Zpět na všechny body</span>
         </Link>
 
         <div className="flex flex-col md:flex-row md:items-center justify-between gap-6 bg-surface-container-lowest rounded-[28px] p-8 md:p-10 soft-shadow border border-outline-variant/20">
