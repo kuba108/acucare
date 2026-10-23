@@ -5,7 +5,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import {
   MapPin, Activity, ShieldAlert, Sparkles, Brain, Frown, CircleDot, Wind,
-  Hand, Disc, ChevronRight
+  Hand, Disc, ChevronRight, Plus, Check, Layers
 } from 'lucide-react';
 import { AcupressurePoint } from '@/data/pointsData';
 import {
@@ -14,6 +14,7 @@ import {
   normalizeChipCoordinates,
   PointLayersInfo
 } from '@/data/pointLayersConfig';
+import { usePointSet } from '@/lib/pointSetStorage';
 
 interface PointDetailInteractiveProps {
   point: AcupressurePoint;
@@ -24,6 +25,9 @@ interface PointDetailInteractiveProps {
 type ViewMode = 'chip' | 'hand';
 
 export function PointDetailInteractive({ point, relatedPoints, initialLayers }: PointDetailInteractiveProps) {
+  const { has, toggle, count: totalSetCount } = usePointSet();
+  const isInSet = has(point.id);
+
   const [selectedMode, setSelectedMode] = useState<ViewMode>('chip');
   const [hoveredMode, setHoveredMode] = useState<ViewMode | null>(null);
 
@@ -268,6 +272,58 @@ export function PointDetailInteractive({ point, relatedPoints, initialLayers }: 
 
       {/* Right Column (Sidebar) */}
       <div className="lg:col-span-4 flex flex-col gap-6">
+
+        {/* Sestava bodů Widget */}
+        <div className="bg-surface-container-lowest rounded-[24px] p-6 soft-shadow border border-outline-variant/30 space-y-3">
+          <div className="flex items-center justify-between">
+            <span className="text-xs font-bold uppercase tracking-wider text-on-surface-variant flex items-center gap-1.5">
+              <Layers className="w-4 h-4 text-[#50aab2]" />
+              Sestava k tisku
+            </span>
+            <Link
+              href="/set-bodu"
+              className="text-xs font-semibold text-[#50aab2] hover:underline flex items-center gap-0.5"
+            >
+              <span>{totalSetCount > 0 ? `Zobrazit sestavu (${totalSetCount})` : 'Otevřít sestavu'}</span>
+              <ChevronRight className="w-3.5 h-3.5" />
+            </Link>
+          </div>
+
+          <div className="flex items-center justify-between gap-3 pt-1">
+            <div>
+              <p className="font-headline font-bold text-on-surface text-base">
+                {isInSet ? 'Bod je v sestavě' : 'Přidat bod do sestavy'}
+              </p>
+              <p className="text-xs font-body text-on-surface-variant">
+                {isInSet
+                  ? 'Zahrnuto v přehledu k tisku'
+                  : 'Vytvořte si přehled bodů vedle sebe'}
+              </p>
+            </div>
+
+            <button
+              type="button"
+              onClick={() => toggle(point.id)}
+              className={`shrink-0 px-4 py-2.5 rounded-full font-body text-xs font-bold transition-all flex items-center gap-1.5 cursor-pointer shadow-xs ${
+                isInSet
+                  ? 'bg-[#d6f2f5] text-[#24656b] hover:bg-red-50 hover:text-red-600 border border-[#50aab2]/30'
+                  : 'bg-[#50aab2] text-white hover:bg-[#3d8e96]'
+              }`}
+            >
+              {isInSet ? (
+                <>
+                  <Check className="w-4 h-4 text-[#24656b]" />
+                  <span>V sestavě</span>
+                </>
+              ) : (
+                <>
+                  <Plus className="w-4 h-4 text-white" />
+                  <span>Přidat bod</span>
+                </>
+              )}
+            </button>
+          </div>
+        </div>
 
         {/* FIRST BOX IN RIGHT COLUMN: Způsob aplikace (View Toggle Box) */}
         <div className="bg-surface-container-lowest rounded-[24px] p-6 soft-shadow border border-outline-variant/30 space-y-4">

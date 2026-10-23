@@ -1,11 +1,13 @@
 'use client';
 
 import React, { useState, useMemo } from 'react';
+import Link from 'next/link';
 import { BodyMap, BodyRegionType } from '@/components/BodyMap';
 import { PointCard } from '@/components/PointCard';
 import { ACUPRESSURE_POINTS } from '@/data/pointsData';
 import { matchesPointSearch } from '@/lib/searchUtils';
 import { Search } from 'lucide-react';
+import { SetBoduBanner } from '@/components/SetBoduBanner';
 
 export default function SeznamBoduPage() {
   const [selectedRegion, setSelectedRegion] = useState<BodyRegionType>('Vše');
@@ -80,6 +82,9 @@ export default function SeznamBoduPage() {
           </p>
         </div>
       )}
+
+      {/* Sestava bodů pro aplikaci chipů - dole pod body */}
+      <SetBoduBanner />
     </main>
   );
 }

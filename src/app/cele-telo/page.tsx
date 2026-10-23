@@ -10,6 +10,7 @@ import {
   Info
 } from 'lucide-react';
 import { MeridianImageMap } from '@/components/MeridianImageMap';
+import { SetBoduBanner } from '@/components/SetBoduBanner';
 
 export const metadata = {
   title: 'Celé tělo – Mapa meridiánů a akupresurních bodů | AcuCare',
@@ -195,6 +196,9 @@ export default function CeleTeloPage() {
           </div>
         </div>
       </section>
+
+      {/* Sestava bodů pro aplikaci chipů - dole pod body */}
+      <SetBoduBanner />
     </main>
   );
 }
