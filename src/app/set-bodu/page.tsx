@@ -85,7 +85,7 @@ export default function SetBoduPage() {
         <div className="flex justify-between items-start">
           <div>
             <h1 className="text-2xl font-bold font-headline text-gray-900">
-              AcuCare — Sestava bodů pro aplikaci chipů HALM®
+              HALM® chip — Sestava bodů pro aplikaci
             </h1>
             <p className="text-sm text-gray-600 mt-1">
               Patentovaná technologie č. 24128 • Vygenerováno dne {currentDate}

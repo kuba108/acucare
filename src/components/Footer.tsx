@@ -21,7 +21,7 @@ export function Footer() {
         <div className="flex flex-col md:flex-row justify-between items-center gap-6 pt-6 border-t border-outline-variant/20">
           {/* Brand */}
           <Link href="/" className="text-headline-md font-headline text-[#50aab2] font-bold hover:opacity-90 transition-opacity">
-            AcuCare
+            HALM® chip
           </Link>
 
           {/* Navigation Links */}
@@ -60,7 +60,7 @@ export function Footer() {
 
           {/* Copyright & Created By */}
           <div className="flex flex-col sm:flex-row items-center gap-1.5 text-on-surface-variant text-body-md font-body text-center md:text-right">
-            <span>© 2026 AcuCare.</span>
+            <span>© 2026 HALM® chip.</span>
             <span className="hidden sm:inline">•</span>
             <span>
               Vytvořil{' '}

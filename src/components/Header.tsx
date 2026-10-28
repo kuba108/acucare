@@ -40,7 +40,7 @@ export function Header() {
         <div className="flex justify-between items-center w-full px-container-padding max-w-[1200px] mx-auto h-16">
           {/* Brand Logo in #50aab2 */}
           <Link href="/" className="text-headline-md font-headline font-bold text-[#50aab2] tracking-tight hover:opacity-90 transition-opacity">
-            AcuCare
+            HALM® chip
           </Link>
 
           {/* Desktop Navigation */}

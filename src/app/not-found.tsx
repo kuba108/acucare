@@ -3,7 +3,7 @@ import Link from 'next/link';
 import { Compass, Search, Home, ArrowRight, Activity, Map, Sparkles } from 'lucide-react';
 
 export const metadata = {
-  title: '404 - Stránka nenalezena | AcuCare',
+  title: '404 - Stránka nenalezena | HALM® chip',
   description: 'Omlouváme se, požadovaná stránka neexistuje. Vraťte se na hlavní stránku nebo prozkoumejte katalog akupresurních bodů.',
 };
 

@@ -13,7 +13,7 @@ import { MeridianImageMap } from '@/components/MeridianImageMap';
 import { SetBoduBanner } from '@/components/SetBoduBanner';
 
 export const metadata = {
-  title: 'Celé tělo – Mapa meridiánů a akupresurních bodů | AcuCare',
+  title: 'Celé tělo – Mapa meridiánů a akupresurních bodů | HALM® chip',
   description: 'Kompletní vizuální průvodce meridiány a akupresurními body na lidském těle. Pochopte tok energie čchi a naučte se rozpoznávat energetické dráhy.',
 };
 

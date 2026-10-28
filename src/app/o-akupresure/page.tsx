@@ -17,7 +17,7 @@ import {
 } from 'lucide-react';
 
 export const metadata = {
-  title: 'Více informací o akupresuře | AcuCare',
+  title: 'Více informací o akupresuře | HALM® chip',
   description: 'Komplexní průvodce akupresurou, energií čchi, meridiány, měřením v cunech a zásadami bezpečné stimulace.',
 };
 

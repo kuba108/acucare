@@ -48,10 +48,10 @@ export async function generateStaticParams() {
 export async function generateMetadata({ params }: PageProps) {
   const { slug } = await params;
   const symptom = SYMPTOM_OPTIONS.find((s) => s.id === slug);
-  if (!symptom) return { title: 'Potíže nenalezeny | AcuCare' };
+  if (!symptom) return { title: 'Potíže nenalezeny | HALM® chip' };
 
   return {
-    title: `Akupresurní body pro: ${symptom.label} | AcuCare`,
+    title: `Akupresurní body pro: ${symptom.label} | HALM® chip`,
     description: symptom.description,
   };
 }

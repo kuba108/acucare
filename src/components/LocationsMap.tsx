@@ -50,7 +50,7 @@ export function LocationsMap() {
               <div className="relative w-full h-full max-w-[550px] mx-auto flex items-center justify-center">
                 <Image
                   src="/cz_map.png"
-                  alt="Mapa České republiky – Měřící a prodejní místa AcuCare"
+                  alt="Mapa České republiky – Měřící a prodejní místa HALM® chip"
                   fill
                   className="object-contain opacity-85 filter drop-shadow-sm hue-rotate-[180deg] saturate-50"
                   priority

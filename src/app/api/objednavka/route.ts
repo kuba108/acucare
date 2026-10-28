@@ -23,13 +23,13 @@ export async function POST(request: Request) {
           'Authorization': `Bearer ${resendApiKey}`,
         },
         body: JSON.stringify({
-          from: process.env.RESEND_FROM_EMAIL || 'AcuCare <onboarding@resend.dev>',
+          from: process.env.RESEND_FROM_EMAIL || 'HALM® chip <onboarding@resend.dev>',
           to: [notificationEmail],
           reply_to: email,
           subject: `Nová poptávka / objednávka přístroje: ${jmeno}`,
           html: `
             <div style="font-family: 'Segoe UI', Arial, sans-serif; max-width: 600px; margin: 0 auto; padding: 24px; background-color: #f6f9f9; border-radius: 16px; border: 1px solid #bec9c5;">
-              <h2 style="color: #50aab2; margin-top: 0;">Nová poptávka z webu AcuCare</h2>
+              <h2 style="color: #50aab2; margin-top: 0;">Nová poptávka z webu HALM® chip</h2>
               <div style="background-color: #ffffff; padding: 20px; border-radius: 12px; border: 1px solid #e1e9eb;">
                 <p style="margin: 8px 0;"><strong>Jméno a příjmení:</strong> ${jmeno}</p>
                 <p style="margin: 8px 0;"><strong>E-mail:</strong> <a href="mailto:${email}" style="color: #50aab2;">${email}</a></p>
@@ -42,7 +42,7 @@ export async function POST(request: Request) {
               </div>
               <div style="margin-top: 20px; padding-top: 12px; border-top: 1px solid #bec9c5; font-size: 12px; color: #666666;">
                 <p style="margin: 4px 0;"><strong>Souhlas se zpracováním OÚ (GDPR):</strong> Udělen</p>
-                <p style="margin: 4px 0;">Odesláno přes Resend API z AcuCare</p>
+                <p style="margin: 4px 0;">Odesláno přes Resend API z HALM® chip</p>
               </div>
             </div>
           `,

@@ -236,7 +236,7 @@ export default function ObjednavkaPage() {
                     className="mt-1 w-5 h-5 rounded-md border-outline-variant text-[#50aab2] focus:ring-[#50aab2] cursor-pointer"
                   />
                   <span className="text-sm font-body text-on-surface leading-snug">
-                    Mám zájem o zasílání speciálních nabídek přístrojů a novinek týkajících se akupresury AcuCare.
+                    Mám zájem o zasílání speciálních nabídek přístrojů a novinek týkajících se akupresury HALM® chip.
                   </span>
                 </label>
               </div>
@@ -272,7 +272,7 @@ export default function ObjednavkaPage() {
               <HeartPulse className="w-6 h-6" />
             </div>
             <h3 className="text-headline-md font-headline text-[#50aab2] text-xl">
-              Proč zkusit AcuCare?
+              Proč zkusit HALM® chip?
             </h3>
             <ul className="space-y-3 text-sm font-body text-on-surface-variant">
               <li className="flex items-start gap-2.5">

@@ -361,7 +361,7 @@ export function PointDetailInteractive({ point, relatedPoints, initialLayers }: 
                       Aplikace chipu
                     </p>
                     <p className="text-xs font-body text-on-surface-variant">
-                      AcuCare akupresurní chip
+                      HALM® akupresurní chip
                     </p>
                   </div>
                 </div>

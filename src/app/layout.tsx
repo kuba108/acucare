@@ -4,7 +4,7 @@ import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
 
 export const metadata: Metadata = {
-  title: 'AcuCare - Akupresurní Body',
+  title: 'HALM® chip - Akupresurní Body',
   description: 'Zadejte své potíže (bolest zad, migréna, nespavost, zažívání, kašel) a objevte konkrétní akupresurní body. Průvodce tradiční akupresurou s návody a vizualizacemi.',
   keywords: ['akupresurní body', 'akupresura', 'bolest zad', 'bolest hlavy', 'tradiční čínská medicína', 'léčivý průvodce', 'masáž bodů'],
   icons: {
